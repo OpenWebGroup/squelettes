@@ -29,3 +29,7 @@ return $letexte;
 }
 
 $quota_cache = 100;
+
+function autoriser_travaux($faire,$quoi,$id,$qui){
+        return intval($qui['id_auteur'])?true:false;
+}
