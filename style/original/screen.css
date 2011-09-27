@@ -1,0 +1,980 @@
+/*
+ * Comme il est indiqué dans les conditions de réutilisation
+ * (http://openweb.eu.org/openwebgroup/licence/), les éléments
+ * graphiques et le design du site (et donc cette feuille de styles CSS
+ * et les images) restent la propriété exclusive de leurs auteurs
+ * respectifs conformément aux droits d'auteur. Toute réutilisation
+ * devra faire l'objet d'une demande préalable
+ * (email:editorial@openweb.eu.org).
+ * Il est de plus dans votre intérêt d'avoir un site au design original,
+ * pour qu'il ait sa propre identité visuelle, plutôt qu'un design
+ * plagié.
+ */
+
+/* Définitions générales */
+body{
+background-color:#369;
+color:#fff;
+font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+font-size:small;
+margin:2em 1%;
+padding:0;
+}
+
+acronym.premier{
+cursor:help;
+border-bottom:1px dotted #369;
+}
+
+code,pre{
+color:#297700;
+background-color:transparent;
+font-family:"Courier New",Courier,monospace;
+font-size:small;
+}
+
+pre{
+border-left:5px solid #a2c2e1;
+padding:0.5em 1em;
+margin-left:2em;
+}
+
+blockquote,q{
+font-style:italic;
+color:#369;
+background-color:transparent;
+quotes:'\0000ab\0000a0' '\0000a0\0000bb' '\00201c\0000a0' '\0000a0\00201d';
+}
+
+samp{
+font-size:small;
+color:#000;
+background-color:#d6e1ec;
+}
+
+caption{
+margin:1em 0;
+color:#369;
+background-color:#a1c2e1;
+font-weight:700;
+}
+
+thead{
+background-color:#d6e1ec;
+color:#369;
+}
+
+table{
+margin-top:1em;
+}
+
+table,td{
+border-collapse:collapse;
+border:1px solid #a2c2e1;
+padding:0.2em;
+}
+
+:focus{
+background-image: none !important;
+background-color:#666 !important;
+color:#fff !important;
+}
+
+/**********************************************************************/
+span.patronyme{
+font-variant:small-caps;
+font-size:1.1em;
+}
+
+/* Définitions des éléments dans l'ordre du code XHTML */
+#page{
+color:#000;
+background-color:#fff;
+background-image:url("fond.png");
+background-position:top right;
+background-repeat:no-repeat;
+border:3px solid #000;
+
+/* permet de fixer une hauteur mini sur les navigateurs modernes */
+min-height:55em;
+/* pour obtenir le même effet sur IE, sachant que si le contenu dépasse, il
+"poussera" la hauteur en ne respectant pas la norme. On se joue de ses lacunes
+*/
+height:55em;
+}
+
+/* pour rétablir le mauvais effet sur les nav. modernes */
+html>body #page{
+height:auto;
+}
+
+#accessible{
+left:0;
+position:absolute;
+top:0.2em;
+width:100%;
+margin:0;
+padding:0;
+}
+
+#accessible ul{
+margin:0 0 0 1em;
+padding:0;
+float:left;
+}
+
+#accessible li{
+background-color:transparent;
+color:#fff;
+display:inline;
+margin:0 1em 0 0;
+}
+
+#accessible a{
+background-color:transparent;
+color:#fff;
+}
+
+#accessible a:hover{
+text-decoration:none;
+}
+
+#switcher{
+margin:0;
+padding:0;
+}
+
+#habillage label{
+vertical-align:top;
+margin-left:0.5em;
+color:#fff;
+background-color:transparent;
+}
+
+#habillage select{
+background-color:#369;
+color:#fff;
+}
+
+#habillage input{
+border:1px solid #fff;
+color:#fff;
+background-color:#f90;
+font-weight:700;
+}
+
+#habillage input:hover{
+color:#036;
+background-color:#d6e1ec;
+cursor:pointer;
+}
+
+#moteur{
+position:absolute;
+right:6%;
+top:4.9em;
+text-align:right;
+}
+
+#moteurint label{
+display:block;
+text-align:left;
+color:#c60;
+background-color:#fff;
+font-weight:700;
+}
+
+#moteur input.champs,#texte form input.champs{
+color:#333;
+background-color:#fff;
+background-image:url("champs.png");
+background-position:top;
+background-repeat:repeat-x;
+border:1px solid #999;
+font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+width:12em;
+}
+
+#moteur input.valid,#texte form input.valid{
+background-color:#f90;
+background-image:url("ok.png");
+background-position:bottom;
+background-repeat:repeat-x;
+border-color:#c60;
+border-style:solid;
+border-width:1px;
+color:#fff;
+cursor:pointer;
+font-weight:700;
+text-align:center;
+}
+
+#moteur input.valid:hover,#texte form input.valid:hover{
+background-color:#69c;
+background-image:url("oksurvol.png");
+background-position:bottom;
+background-repeat:repeat-x;
+border:1px solid #369;
+color:#fff;
+}
+
+#moteur input.valid:active,#texte form input.valid:active{
+background-color:#9cf;
+background-image:url("okclic.png");
+background-position:bottom;
+background-repeat:repeat-x;
+border:1px solid #9cb4ce;
+color:#fff;
+}
+
+#logo{
+margin:4em 0 0 5%;
+}
+
+#logo img{
+border:0;
+}
+
+#logo a{
+color:#000;
+background-color:transparent;
+}
+
+/*#menus{
+
+}*/
+
+#accueil{
+margin-bottom:1em;
+}
+
+#accueil ul{
+border-width:1px 1px 0 1px;
+border-style:solid;
+border-color:#d6e1ec;
+padding:0;
+margin:0;
+}
+
+#accueil li{
+border-bottom:1px solid #d6e1ec;
+list-style:none;
+margin:0;
+}
+
+#accueil a{
+display:block;
+text-decoration:none;
+color:#369;
+background-color:#fff;
+padding-left:1em;
+}
+
+#accueil a:hover{
+background-color:#eff4fa;
+color:#036;
+}
+
+#profil{
+background-color:#fff;
+color:#000;
+position:absolute;
+right:6%;
+text-align:center;
+top:9em;
+width:20.5em;
+}
+
+#profil h2{
+border-bottom:3px solid #78705c;
+font-size:small;
+font-weight:500;
+margin:0;
+}
+
+#profil h2 em{
+color:#69c;
+background-color:transparent;
+font-style:normal;
+font-weight:700;
+}
+
+#profil ul{
+background-image:url("profil.png");
+background-position:top;
+background-repeat:repeat-x;
+margin:0;
+padding:3px 0 0 0;
+}
+
+#profil li{
+display:inline;
+font-weight:700;
+margin:0;
+padding:0;
+}
+
+#profil a{
+color:#686151;
+background-color:transparent;
+padding:0 0.5em;
+text-decoration:none;
+}
+
+#profil a:hover{
+background-color:#c60;
+color:#fff;
+}
+
+/* --------------- */
+#sectionmenus{
+left:3%;
+position:absolute;
+top:15.2em;
+width:17%;
+overflow:hidden;
+}
+
+#technologie,#theme{
+color:#655f4b;
+background-color:#fff;
+}
+
+/* --------------- */
+#technologie h2,#theme h2{
+border-color:#f90;
+border-style:solid;
+border-width:0 0 3px 0;
+font-size:medium;
+font-weight:700;
+margin:0;
+padding-left:0em;
+text-transform:uppercase;
+}
+
+#technologie h2:first-letter,#theme h2:first-letter{
+color:#f90;
+background-color:transparent;
+}
+
+#technologie ul,#theme ul{
+margin-bottom:1.5em;
+margin-top:0.5em;
+}
+
+#technologie li,#theme li,#ressources li{
+display:inline;
+list-style:none;
+}
+
+#technologie a,#theme a{
+color:#f60;
+background-color:transparent;
+display:block;
+font-weight:700;
+margin-left:-3em;
+padding-left:1em;
+text-decoration:none;
+}
+
+#technologie a:hover,#theme a:hover{
+background-color:#ffecce;
+color:#f60;
+}
+
+#ressources{
+color:#655f4b;
+background-color:#fff;
+margin:0;
+padding:0;
+}
+
+#ressources h2{
+border-bottom:3px #690 solid;
+font-size:medium;
+font-weight:700;
+margin:0;
+padding-left:0em;
+text-transform:uppercase;
+}
+
+#ressources h2:first-letter{
+color:#690;
+background-color:transparent;
+}
+
+#ressources a{
+color:#690;
+background-color:transparent;
+display:block;
+font-weight:700;
+margin-left:-3em;
+padding-left:1em;
+text-decoration:none;
+}
+
+#ressources a:hover{
+color:#690;
+background-color:#eaf2db;
+}
+
+#ours{
+color:#036;
+background-color:transparent;
+margin:0 3% 0 21%;
+padding:0 0 1em 0;
+}
+
+#ours ul{
+margin-left:0;
+padding-left:0;
+}
+
+#ours li{
+border-right:1px solid #036;
+display:inline;
+margin:0 0.5em 0 0;
+padding:0 0.5em 0 0;
+}
+
+#ours li.dernier{
+border:0;
+}
+
+#ours a{
+background-color:transparent;
+color:#f60;
+}
+
+#ours a:hover{
+background-color:#eff4fa;
+color:#369;
+text-decoration:none;
+}
+
+/* Listes de documents */
+dl.listedocs{
+color:#000;
+background-color:#fff;
+border:1px dotted #69c;
+padding:1em;
+}
+
+dl.listedocs dt{
+font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+font-size:85%;
+/*font-weight:500;*/
+margin:0.2em 0 0.4em 0;
+background-color:transparent;
+color:#69c;
+}
+
+dl.listedocs dt cite{
+display:block;
+font-style:normal;
+font-size:small;
+margin:0;
+margin-bottom:0.2em;
+color:#69c;
+background-color:transparent;
+/*font-weight: 700;*/
+border-bottom:1px dotted #69c;
+}
+
+dl.listedocs dd{
+margin:0;
+margin-bottom:1.4em;
+font-weight:500;
+}
+
+dl.listedocs p{
+margin:0.2em 0 0.2em 0;
+}
+
+/* Page d'accueil */
+#texteaccueil{
+margin:0 2% 2em 20%;
+}
+
+#texteaccueil h2{
+font-family:Georgia,"Times New Roman",Times,serif;
+font-size:medium;
+font-weight:700;
+}
+
+#texteaccueil h3{
+color:#690;
+background-color:transparent;
+font-family:Georgia,"Times New Roman",Times,serif;
+font-size:small;
+font-weight:700;
+}
+
+#intro{
+float:right;
+margin-left:1%;
+width:30%;
+}
+
+#presentation{
+color:#000;
+background-color:#ffecce;
+border:1px solid #666;
+margin:0 0 1em 0;
+padding:0.5em 1em;
+}
+
+#presentation h2{
+background-color:transparent;
+color:#c60;
+margin:0;
+}
+
+#presentation p{
+margin:0.5em 0;
+}
+
+#presentation a{
+color:#c60;
+background-color:transparent;
+}
+
+#presentation a:hover{
+color:#369;
+background-color:transparent;
+}
+
+#humeur{
+border:1px solid #6699cc;
+margin:0;
+padding:0 1em 1em 1em;
+}
+
+#humeur h2{
+background-color:#eff4fa;
+border-color:#69c;
+border-style:solid;
+border-width:0 1px 1px 1px;
+color:#369;
+margin:0 0 0.5em 0;
+padding:0.4em 0.2em 0.2em 0.2em;
+width:55%;
+}
+
+#humeur p{
+margin:0;
+}
+
+#humeur a{
+color:#f60;
+background-color:transparent;
+}
+
+#humeur a:hover{
+color:#369;
+background-color:transparent;
+}
+
+#humeur .listedocs,#articles .listedocs{
+border:none;
+margin:0;
+margin-bottom: 0.2em;
+padding:0;
+}
+
+#humeur .listedocs dt,#articles .listedocs dt{
+margin-top:0;
+}
+
+#humeur .listedocs cite,#articles .listedocs cite{
+border-bottom:none;
+}
+
+#humeur .listedocs dt cite a{
+color:#690;
+background: transparent;
+}
+
+/* ---- debut blog --- */
+#blogs{
+color:#fff;
+background:#7595c8;
+border:1px solid #fff;
+border-bottom:10px solid #f90; /* #aeb200; */
+margin:1em 0;
+padding:0.5em 1em;
+padding:0
+}
+
+#blogs h2{
+background:#306397 url("titre_blog.png") no-repeat 90% 50%;
+color:#fff;
+margin:0;
+border-bottom:5px solid #fff;
+padding:0.5em 1em
+}
+
+#blogs p{
+margin:0.5em 0;
+color:#fff;
+}
+
+#blogs ul{
+list-style:none;
+margin:0;
+padding:0;
+border-bottom: 5px solid #fff;
+}
+
+#blogs ul li{
+margin:0;
+padding:0.7em 0.5em 0.8em 10px;
+border-bottom:1px dotted #c8e4e8;
+}
+
+#blogs ul li:hover{
+background:#5a82bd url("puce_blog.png") no-repeat 0 10px;
+}
+#blogs ul li:hover a {
+text-decoration:none;
+}
+#blogs a{
+color:#fff;
+background:transparent;
+font-weight:700
+}
+
+#blogs a:hover{
+text-decoration:none;
+color: #fff;
+}
+
+/* ---- fin blog --- */
+
+#articles .listedocs{
+background:transparent;
+color:inherit;
+}
+
+#actualite{
+margin-bottom:2em;
+}
+
+#actualite,#articles{
+padding:0 2%;
+width:100%;
+voice-family:"\"}\"";
+voice-family:inherit;
+width:63%;
+}
+
+html>body #actualite,html>body #articles{
+width:63%;
+}
+
+#actualite h2{
+border-bottom:2px solid #369;
+color:#369;
+font-size:large;
+background-color:transparent;
+padding:0 0 0.2em 0;
+}
+
+#actualite h3{
+margin:0;
+color:#69c;
+background-color:transparent;
+}
+
+
+#actualite p.date{
+font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+font-size:85%;
+font-weight:500;
+margin:0.2em 0 1em 0;
+}
+
+#actualite p,#articles p{
+margin:0 0 2em 0;
+}
+
+#actualite a,#articles a, .listedocs a{
+background-color:transparent;
+color:#f60;
+}
+
+#actualite a:hover, #articles a:hover, .listedocs a:hover{
+color:#369;
+background-color:transparent;
+text-decoration:none;
+}
+
+#articles{
+color:#000;
+background-color:#eff4fa;
+border:1px solid #9cb4ce;
+}
+
+#articles h2{
+border-bottom:2px solid #369;
+color:#369;
+background-color:transparent;
+padding:0.8em 0 0.2em 0;
+}
+
+#texteaccueil p.tous {
+text-align:right;
+}
+
+#texteaccueil p.tous a{
+background-color:#ffecce;
+border:1px solid #c60;
+color:#000;
+font-weight:500;
+padding:0.2em;
+text-decoration:none;
+}
+
+#texteaccueil p.tous a:hover{
+background-color:#ffecce;
+color:#c60;
+}
+
+
+/* Pages intérieures */
+#texte{
+color:#000;
+background-color:#f5f8fc;
+border:1px solid #69c;
+line-height:150%;
+margin:0 3% 2em 21%;
+padding:0 2% 3em 2%;
+}
+
+#texte a[hreflang]:after{
+content:"\0000a0[" attr(hreflang) "]";
+}
+
+#texte .abstract{
+background-color:#fff;
+background-image:none;
+border:1px dotted #69c;
+color:#333;
+margin:0;
+padding:0 1em;
+display:block;
+}
+
+#texte .abstract em{
+font-weight:700;
+font-style:normal;
+color:#690;
+background-color:transparent;
+}
+
+#texte .abstract hr{
+display:block;
+clear:both;
+visibility:hidden;
+}
+
+#texte .auteur{
+margin:1em 0 0 0;
+float:right;
+display:block;
+}
+
+#texte .auteur ul{
+color:#000;
+background-color:transparent;
+margin:0 0 0 0.5em;
+padding:0 1em;
+border-left:1px solid #69c;
+}
+
+#texte .auteur li{
+font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+font-size:80%;
+border-bottom:1px dotted #69c;
+list-style:none;
+color:#369;
+background-color:transparent;
+}
+
+#texte .auteur li.dernier{
+border-bottom:0;
+}
+
+#texte .auteur strong{
+background-color:transparent;
+color:#690;
+}
+
+/**********************************************************************/
+#texte div.attention, #texte div.important, #texte div.note, #texte div.astuce{
+color:#000;
+background-color:transparent;
+border:1px dotted #69c;
+padding:1em;
+}
+
+#texte span.attention, #texte span.important, #texte span.note, #texte span.astuce{
+font-variant:small-caps;
+font-size:1.1em;
+}
+/**********************************************************************/
+
+#texte hr{
+display:none;
+}
+
+#texte li{
+list-style:disc;
+}
+
+#texte ul ul li{
+list-style-type:circle;
+}
+
+#texte ol li{
+list-style-type:decimal;
+}
+
+#texte h2,#texte h3,#texte .resultat dt{
+font-family:Georgia,"Times New Roman",Times,serif;
+}
+
+#texte h2{
+background-color:transparent;
+color:#369;
+font-size:130%;
+}
+
+#texte h3 code{
+color:inherit;
+background-color:transparent;
+}
+
+#texte h3,#texte .resultat dt{
+background-color:transparent;
+color:#369;
+font-size:small;
+margin:2em 0 0 0;
+line-height:110%;
+}
+
+#texte h4{
+font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+background-color:transparent;
+color:#69c;
+font-weight:700;
+font-size:small;
+border-bottom:1px dotted #a1c2e1;
+}
+
+#texte h5{
+color:#69c;
+background-color:transparent;
+font-weight:500;
+font-size:small;
+}
+
+#texte a{
+color:#f60;
+background-color:transparent;
+}
+
+#texte a:hover{
+color:#369;
+background-color:transparent;
+text-decoration:none;
+}
+
+#texte a:visited{
+color:#369;
+background-color:transparent;
+}
+
+/* Formulaire dans le texte */
+#texte form{
+margin:2.5em 0;
+}
+
+#texte form label{
+color:#369;
+background-color:transparent;
+margin:0.5em 0;
+}
+
+.formulaire_ecrire_auteur fieldset {
+  display: table;
+}
+
+.formulaire_ecrire_auteur p {
+  display: table-row;
+}
+.formulaire_ecrire_auteur p.spip_bouton {
+  display: block;
+}
+
+.formulaire_ecrire_auteur label,
+.formulaire_ecrire_auteur input,
+.formulaire_ecrire_auteur textarea {
+  display: table-cell;
+  vertical-align: top;
+}
+
+/* .formulaire_ecrire_auteur label {
+  max-width: 3ex;
+}
+
+.formulaire_ecrire_auteur input,
+.formulaire_ecrire_auteur textarea {
+  min-width: 30ex;
+  width: auto;
+} */
+
+p.reaction {
+margin-bottom: 2em;
+}
+
+/* === Commentaires sur articles === */
+ul.forum {
+background: #fff;
+border: 1px dotted #69c;
+margin: 0;
+padding: 1em;
+}
+
+ul.forum  ul{
+margin: 0;
+padding: 0;
+}
+
+#texte ul.forum li {
+list-style: none;
+}
+
+div.forum-chapo {
+color: #369;
+font-weight: 700;
+}
+
+ul.forum small {
+font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+}
+
+div.forum-message {
+}
+
+div.forum-texte {
+}
+
+div.forum-texte .repondre{
+margin-top: 0;
+text-align: right;
+}
+
+
+
+

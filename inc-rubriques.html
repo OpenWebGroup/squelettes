@@ -1,0 +1,41 @@
+#CACHE{24*3600*30}
+<div id="menus">
+  <div id="profil">
+    <h2>Consultez ce site selon <em>votre profil</em>.</h2>
+    <ul>
+      <BOUCLE_profil(MOTS){type="Profil"}{par titre}>
+      <li><a href="#URL_MOT">#TITRE</a></li>
+      </BOUCLE_profil>
+    </ul>
+  </div>
+
+  <div id="sectionmenus">
+    <INCLURE{fond=inc-liens}>
+    <div id="technologie">
+      <h2>Technologie</h2>
+      <ul>
+        <BOUCLE_techno(MOTS){type="Technologie"}>
+        <li><a href="#URL_MOT">#TITRE</a></li>
+        </BOUCLE_techno>
+      </ul>
+    </div>
+
+    <div id="theme">
+      <h2>Thème</h2>
+      <ul>
+        <BOUCLE_theme(MOTS){type="Thème"}>
+        <li><a href="#URL_MOT">#TITRE</a></li>
+        </BOUCLE_theme>
+      </ul>
+    </div>
+
+    <div id="ressources">
+      <h2>Ressources</h2>
+      <ul>
+        <BOUCLE_ressources(ARTICLES){id_rubrique=4}>
+        <li><a href="#URL_ARTICLE">#SOUSTITRE</a></li>
+        </BOUCLE_ressources>
+      </ul>
+    </div>
+  </div>
+</div>

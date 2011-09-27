@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
+  <head profile="http://dublincore.org/documents/2008/08/04/dc-html/">
+    <title><:poster_message:> - [(#NOM_SITE_SPIP|textebrut)]</title>
+    <INCLURE{fond=inc-head}>
+    <INCLURE{fond=inc-dublincore}{id_article}>
+    <meta name="robots" content="none" />
+  </head>
+  <body>
+    <div id="page">
+
+      <INCLURE{fond=inc-accessible}>
+      <INCLURE{fond=inc-moteur}>
+      <INCLURE{fond=inc-entete}>
+
+      <div id="texte">
+        <h2><:poster_message:></h2>
+
+        <div class="menu articles">
+            <h2><:en_reponse:></h2>
+        
+            <BOUCLE_forum_parent(FORUMS) {id_forum}>
+            <h3><a href="#URL_FORUM">#TITRE</a></h3>
+            <small>[(#DATE|affdate_jourcourt)][&nbsp;(#DATE|heures)][:(#DATE|minutes)][, <:par_auteur:> (#NOM)]</small>
+            [<div class="introduction">(#INTRODUCTION|lignes_longues)</div>]
+            </BOUCLE_forum_parent>
+            
+            <BOUCLE_article(ARTICLES) {id_article}>
+            [(#LOGO_ARTICLE||image_reduire{150,100})]
+            <h3><a href="#URL_ARTICLE">#TITRE</a></h3>
+            <small>[(#DATE|affdate_jourcourt)][, <:par_auteur:> (#LESAUTEURS)]</small>
+            [<div class="introduction">(#INTRODUCTION|coquette)</div>]
+            </BOUCLE_article>
+            
+            <BOUCLE_breve(BREVES) {id_breve}>
+            [(#LOGO_BREVE||image_reduire{150,100})]
+            <h3><a href="#URL_BREVE">#TITRE</a></h3>
+            <small>[(#DATE|affdate_jourcourt)]</small>
+            [<div class="introduction">(#INTRODUCTION|coquette)</div>]
+            </BOUCLE_breve>
+            
+            <BOUCLE_rubrique(RUBRIQUES) {id_rubrique}>
+            <h3><a href="#URL_RUBRIQUE">#TITRE</a></h3>
+            [<div class="texte">(#TEXTE|coquette)</div>]
+            </BOUCLE_rubrique>
+            
+            <BOUCLE_syndic(SITES) {id_syndic}>
+            <h3><a href="[(#ID_SYNDIC|generer_url_entite{'site'})]">#NOM_SITE</a></h3>
+            [<div class="texte">(#DESCRIPTIF|coquette)</div>]
+            </BOUCLE_syndic>
+            
+            <//B_forum_parent>
+            #FORMULAIRE_FORUM
+
+        </div>
+
+      </div>
+
+      [(#REM) Menu de navigation par rubriques ]
+      <INCLURE{fond=inc-rubriques}>
+
+      [(#REM) Pied de page ]
+      <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
+    </div>
+  </body>
+</html>

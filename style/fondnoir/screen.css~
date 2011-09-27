@@ -1,0 +1,795 @@
+/*
+ * Comme il est indiqué dans les conditions de réutilisation
+ * (http://openweb.eu.org/openwebgroup/licence/), les éléments
+ * graphiques et le design du site (et donc cette feuille de styles CSS
+ * et les images) restent la propriété exclusive de leurs auteurs
+ * respectifs conformément aux droits d'auteur. Toute réutilisation
+ * devra faire l'objet d'une demande préalable
+ * (email:editorial@openweb.eu.org).
+ * Il est de plus dans votre intêret d'avoir un site au design original,
+ * pour qu'il ait sa propre identité visuelle, plutôt qu'un design
+ * plagié...
+ */
+body{
+background-color:#000;
+color:#fff;
+font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+font-size:small;
+margin:2em 0;
+padding:0;
+}
+
+/* Definitions generales */
+acronym.premier{
+cursor:help;
+border-bottom:1px dotted #fff;
+}
+
+code,pre{
+color:#ddd;
+background-color:transparent;
+font-family:"Courier New",Courier,monospace;
+font-size:small;
+}
+
+pre{
+border-left:5px solid #666;
+padding:0.5em 1em;
+margin-left:2em;
+}
+
+blockquote,q{
+font-style:italic;
+color:#fff;
+background-color:transparent;
+quotes:'\0000ab\0000a0' '\0000a0\0000bb' '\00201c\0000a0' '\0000a0\00201d';
+}
+
+samp{
+font-size:medium;
+color:#000;
+background-color:#ccc;
+}
+
+caption{
+margin:1em 0;
+color:#fff;
+background-color:#666;
+font-weight:700;
+}
+
+thead{
+background-color:#444;
+color:#fff;
+}
+
+table{
+margin-top:1em;
+}
+
+table,td{
+border-collapse:collapse;
+border:1px solid #999;
+padding:0.2em;
+}
+
+/* Definitions des elements dans l'ordre du code Xhtml */
+#page{
+color:#fff;
+background-color:#000;
+background-image:url("fond.png");
+background-position:top right;
+background-repeat:no-repeat;
+border:3px solid #333;
+/* permet de fixer une hauteur mini sur les navigateurs modernes */
+min-height:55em;
+/* pour obtenir le même effet sur IE, sachant que si le contenu dépasse, il
+"poussera" la hauteur en ne respectant pas la norme. On se joue de ses lacunes
+*/
+height:55em;
+}
+
+/* pour rétablir le mauvais effet sur les nav. modernes */
+html>body #page{
+height:auto;
+}
+
+#moteur{
+position:absolute;
+right:6%;
+top:4.9em;
+text-align:right;
+}
+
+#moteurint label{
+display:block;
+text-align:left;
+color:#ccc;
+background-color:#000;
+font-weight:700;
+}
+
+#moteur input.champs,#texte form input.champs{
+color:#fff;
+background-color:#444;
+border:1px solid #999;
+font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+width:12em;
+}
+
+#moteur input.valid,#texte form input.valid{
+background-color:#f93;
+border-color:#fff;
+border-style:solid;
+border-width:1px;
+color:#fff;
+cursor:pointer;
+font-weight:700;
+text-align:center;
+}
+
+#moteur input.valid:hover,#texte form input.valid:hover{
+background-color:#9cf;
+border:1px solid #fff;
+color:#000;
+}
+
+#moteur input.valid:active,#texte form input.valid:active{
+background-color:#9cf;
+border:1px solid #fff;
+color:#fff;
+}
+
+/* --------------- */
+#accessible{
+left:0;
+position:absolute;
+top:0.2em;
+width:100%;
+margin:0;
+padding:0;
+}
+
+#accessible ul{
+margin:0 0 0 1em;
+padding:0;
+float:left;
+}
+
+#accessible li{
+background-color:transparent;
+color:#fff;
+display:inline;
+margin:0 1em 0 0;
+}
+
+#accessible a{
+background-color:transparent;
+color:#fff;
+/*text-decoration:none;*/
+}
+
+#accessible a:hover{
+text-decoration:none;
+}
+
+/* --------------- */
+#switcher{
+margin:0;
+padding:0;
+}
+
+#habillage label{
+vertical-align:top;
+margin-left:0.5em;
+color:#fff;
+background-color:transparent;
+}
+
+#habillage select{
+background-color:#000;
+color:#fff;
+}
+
+#habillage input{
+border:1px solid #fff;
+color:#fff;
+background-color:#f93;
+font-weight:700;
+}
+
+#habillage input:hover{
+color:#036;
+background-color:#9cf;
+cursor:pointer;
+}
+
+/* --------------- */
+#logo{
+margin:4em 0 0 5%;
+}
+
+#logo img{
+border:0;
+color:#ccc;
+background-color:#000;
+}
+
+#logo a{
+color:#fff;
+background-color:transparent;
+}
+
+/* Page d'accueil uniquement */
+#texteaccueil{
+margin:0 2% 2em 20%;
+}
+
+#texteaccueil h2{
+font-family:Georgia,"Times New Roman",Times,serif;
+font-size:medium;
+font-weight:700;
+}
+
+#texteaccueil h3{
+color:#9cf;
+background-color:transparent;
+font-family:Georgia,"Times New Roman",Times,serif;
+font-size:small;
+font-weight:700;
+}
+
+#intro{
+float:right;
+margin-left:1%;
+width:30%;
+}
+
+#presentation{
+color:#fff;
+background-color:#333;
+border:1px solid #999;
+margin:0 0 1em 0;
+padding:0.5em 1em;
+}
+
+#presentation h2{
+background-color:transparent;
+color:#9cf;
+margin:0;
+}
+
+#presentation p{
+margin:0.5em 0;
+}
+
+#presentation a{
+color:#ffb94f;
+background-color:transparent;
+}
+
+#presentation a:hover{
+color:#fff;
+background-color:transparent;
+}
+
+#humeur{
+border:1px solid #999;
+margin:0;
+padding:0 1em 1em 1em;
+}
+
+#humeur h2{
+background-color:#333;
+border-color:#999;
+border-style:solid;
+border-width:0 1px 1px 1px;
+color:#9cf;
+margin:0 0 0.5em 0;
+padding:0.4em 0.2em 0.2em 0.2em;
+width:55%;
+}
+
+#humeur h3{
+margin:0;
+padding:0;
+}
+
+#humeur h4{
+font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+font-size:85%;
+font-weight:500;
+margin:0.2em 0 1em 0;
+padding:0;
+}
+
+#humeur p{
+margin:0;
+}
+
+#humeur a{
+color:#ffb94f;
+background-color:transparent;
+}
+
+#humeur a:hover{
+color:#fff;
+background-color:transparent;
+}
+
+/* --------------- */
+#actualite{
+margin-bottom:2em;
+}
+
+#actualite,#articles{
+padding:0 2%;
+width:100%;
+voice-family:"\"}\"";
+voice-family:inherit;
+width:63%;
+}
+
+html>body #actualite,html>body #articles{
+width:63%;
+}
+
+#actualite h2{
+border-bottom:2px solid #9cf;
+color:#9cf;
+font-size:large;
+background-color:transparent;
+padding:0 0 0.2em 0;
+}
+
+#actualite h3,#articles h3{
+margin:0;
+color:#fff;
+background-color:transparent;
+}
+
+#actualite h4,#articles h4{
+font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+font-size:85%;
+font-weight:500;
+margin:0.2em 0 1em 0;
+}
+
+#humeur h5,#actualite h5,#articles h5{
+text-align:right;
+font-size:small;
+}
+
+#humeur h5 a,#actualite h5 a,#articles h5 a{
+background-color:transparent;
+border:1px solid #999;
+color:#ffb94f;
+font-weight:700;
+padding:0.2em;
+text-decoration:none;
+}
+
+#humeur h5 a:hover,#actualite h5 a:hover,#articles h5 a:hover{
+background-color:transparent;
+color:#fff;
+}
+
+#actualite p,#articles p{
+margin:0 0 2em 0;
+}
+
+#actualite a,#articles a{
+background-color:transparent;
+color:#ffb94f;
+}
+
+#actualite a:hover,#articles a:hover{
+color:#fff;
+background-color:transparent;
+/*text-decoration:none;*/
+}
+
+#articles{
+color:#fff;
+background-color:#333;
+border:1px solid #999;
+}
+
+#articles h2{
+border-bottom:2px solid #9cf;
+color:#9cf;
+background-color:transparent;
+padding:0.8em 0 0.2em 0;
+}
+
+/* Pages interieures */
+#texte{
+color:#fff;
+background-color:#333;
+border:1px solid #666;
+line-height:150%;
+margin:0 3% 2em 21%;
+padding:0 2% 3em 2%;
+}
+
+#texte a[hreflang]:after {
+content:"\0000a0[" attr(hreflang) "]";
+}
+
+#texte .abstract{
+background-color:#444;
+background-image:none;
+border:1px dotted #999;
+color:#fff;
+margin:0;
+padding:0 1em;
+display:block;
+}
+
+#texte .abstract em{
+font-weight:700;
+font-style:normal;
+color:#ccc;
+background-color:transparent;
+}
+
+#texte .abstract hr{
+display:block;
+clear:both;
+visibility:hidden;
+}
+
+#texte .auteur{
+margin:1em 0 0 0;
+float:right;
+display:block;
+}
+
+#texte .auteur ul{
+color:#000;
+background-color:transparent;
+margin:0 0 0 0.5em;
+padding:0 1em;
+border-left:1px solid #fff;
+}
+
+#texte .auteur li{
+font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+font-size:80%;
+border-bottom:1px dotted #999;
+list-style:none;
+color:#fff;
+background-color:transparent;
+}
+
+#texte .auteur li.dernier{
+border-bottom:0;
+}
+
+#texte .auteur strong{
+background-color:transparent;
+color:#9cf;
+}
+
+#texte hr{
+display:none;
+}
+
+#texte li{
+list-style:disc;
+}
+
+#texte ul ul li{
+list-style-type:circle;
+}
+
+#texte ol li{
+list-style-type:decimal;
+}
+
+#texte h2,#texte h3,#texte .resultat dt{
+font-family:Georgia,"Times New Roman",Times,serif;
+}
+
+#texte h2{
+background-color:transparent;
+color:#9cf;
+font-size:large;
+}
+
+#texte h3 code{
+color:inherit;
+background-color:transparent;
+}
+
+#texte h3,#texte .resultat dt{
+background-color:transparent;
+color:#9cf;
+font-size:small;
+margin:2em 0 0 0;
+line-height:110%;
+}
+
+#texte h4{
+font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+background-color:transparent;
+color:#9cf;
+font-weight:700;
+font-size:small;
+border-bottom:1px dotted #9cf;
+}
+
+#texte h5{
+color:#9cf;
+background-color:transparent;
+font-weight:500;
+font-size:small;
+}
+
+#texte a{
+color:#ffb94f;
+background-color:transparent;
+}
+
+#texte a:hover{
+color:#fff;
+background-color:transparent;
+/*text-decoration:none;*/
+}
+
+#texte a:visited{
+color:#fff;
+background-color:transparent;
+}
+
+dl.listeintro{
+color:#fff;
+background-color:#444;
+border:1px dotted #999;
+padding:1em;
+}
+
+dl.listeintro dt{
+border-bottom:1px dotted #9cf;
+margin-bottom:0;
+font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+background-color:transparent;
+color:#9cf;
+font-weight:700;
+font-size:small;
+}
+
+dl.listeintro h5{
+margin:0;
+font-weight:500;
+}
+
+dl.listeintro h5 strong{
+margin-right:1em;
+font-weight:500;
+}
+
+dl.listeintro p{
+margin:0.2em 0 2em 0;
+}
+
+/* Menus */
+/*#menus{
+
+}*/
+
+#accueil{
+margin-bottom:1em;
+}
+
+#accueil ul{
+border-width:1px 1px 0 1px;
+border-style:solid;
+border-color:#666;
+padding:0;
+margin:0;
+}
+
+#accueil li{
+border-bottom:1px solid #666;
+list-style:none;
+margin:0;
+}
+
+#accueil a{
+display:block;
+text-decoration:none;
+color:#ffb94f;
+background-color:#000;
+padding-left:1em;
+}
+
+#accueil a:hover{
+background-color:#666;
+color:#fff;
+}
+
+#profil{
+background-color:#000;
+color:#fff;
+position:absolute;
+right:6%;
+text-align:center;
+top:9em;
+width:20.5em;
+}
+
+#profil h2{
+border-bottom:3px solid #ccc;
+font-size:small;
+font-weight:500;
+margin:0;
+}
+
+#profil h2 em{
+color:#fff;
+background-color:transparent;
+font-style:normal;
+font-weight:700;
+}
+
+#profil ul{
+margin:0;
+padding:3px 0 0 0;
+}
+
+#profil li{
+display:inline;
+font-weight:700;
+margin:0;
+padding:0;
+}
+
+#profil a{
+color:#ffb94f;
+background-color:transparent;
+padding:0 0.5em;
+text-decoration:none;
+}
+
+#profil a:hover{
+background-color:#666;
+color:#fff;
+}
+
+/* --------------- */
+#sectionmenus{
+left:2%;
+position:absolute;
+top:15.2em;
+width:17%;
+overflow:hidden;
+}
+
+#technologie,#theme{
+color:#ccc;
+background-color:#000;
+}
+
+/* --------------- */
+#technologie h2,#theme h2{
+border-color:#ccc;
+border-style:solid;
+border-width:0px 0px 3px 0px;
+font-size:medium;
+font-weight:700;
+margin:0;
+padding-left:0em;
+text-transform:uppercase;
+}
+
+#technologie h2:first-letter,#theme h2:first-letter{
+/*color:#f93;
+background-color:transparent;*/
+}
+
+#technologie ul,#theme ul{
+margin-bottom:1.5em;
+margin-top:0.5em;
+}
+
+#technologie li,#theme li,#ressources li{
+display:inline;
+list-style:none;
+}
+
+#technologie a,#theme a{
+color:#ffb94f;
+background-color:transparent;
+display:block;
+font-weight:700;
+margin-left:-3em;
+padding-left:1em;
+text-decoration:none;
+}
+
+#technologie a:hover,#theme a:hover{
+background-color:#666;
+color:#fff;
+}
+
+#ressources{
+color:#ccc;
+background-color:#000;
+margin:0;
+padding:0;
+}
+
+#ressources h2{
+border-bottom:3px #ccc solid;
+font-size:medium;
+font-weight:700;
+margin:0;
+padding-left:0em;
+text-transform:uppercase;
+}
+
+#ressources h2:first-letter{
+/*color:#690;
+background-color:transparent;*/
+}
+
+#ressources a{
+color:#ffb94f;
+background-color:transparent;
+display:block;
+font-weight:700;
+margin-left:-3em;
+padding-left:1em;
+text-decoration:none;
+}
+
+#ressources a:hover{
+color:#fff;
+background-color:#666;
+}
+
+#ours{
+color:#fff;
+background-color:transparent;
+margin:0 3% 0 21%;
+padding:0 0 1em 0;
+}
+
+#ours ul{
+margin-left:0;
+padding-left:0;
+}
+
+#ours li{
+border-right:1px solid #fff;
+display:inline;
+margin:0 0.5em 0 0;
+padding:0 0.5em 0 0;
+}
+
+#ours li.dernier{
+border:0;
+}
+
+#ours a{
+background-color:transparent;
+color:#ffb94f;
+}
+
+#ours a:hover{
+background-color:#666;
+color:#fff;
+/*text-decoration:none;*/
+}
+
+/* Formulaire dans le texte */
+#texte form{
+margin:2.5em 0;
+}
+
+#texte form label{
+color:#9cf;
+background-color:transparent;
+margin:0.5em 0;
+}

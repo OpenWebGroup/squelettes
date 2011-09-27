@@ -1,0 +1,63 @@
+#CACHE{86400}
+<BOUCLE_article_principal(ARTICLES) {id_article}>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
+  <head profile="http://dublincore.org/documents/2008/08/04/dc-html/">
+    <title>[(#TITRE|textebrut|supprimer_numero) - ][(#NOM_SITE_SPIP|textebrut)]</title>
+    <INCLURE{fond=inc-head}>
+    <INCLURE{fond=inc-dublincore}{id_article}>
+  </head>
+
+  <body>
+    <div id="page">
+
+      <INCLURE{fond=inc-accessible}>
+      <INCLURE{fond=inc-moteur}>
+      <INCLURE{fond=inc-entete}>
+
+      <div id="texte">
+        <h2>[(#TITRE|supprimer_numero)]</h2>
+        [(#CHAPO|?{' ',''})
+        <div class="abstract">
+         <INCLURE{fond=inc-article-boiteauteurs} {id_article}>
+          <h3>En bref</h3>
+          [(#CHAPO|coquette)]
+          <hr />
+        </div>
+        ]
+         [(#CHAPO|?{'',' '})
+       <INCLURE{fond=inc-article-boiteauteurs} {id_article}>
+        ]   
+
+        [(#TEXTE|coquette)]
+
+        [(#NOTES)]
+
+        <hr />
+        <p class="reaction">
+	Une question, une remarque ? Écrivez à
+	<B_reaction>
+	<BOUCLE_reaction(AUTEURS){id_article}{0,1}>
+	[(#EMAIL|?{<a href="#URL_AUTEUR">l'auteur</a>,
+	<a href="mailto:editorial%40openweb.eu.org">editorial@openweb.eu.org</a>})].
+	</BOUCLE_reaction>
+	</B_reaction>
+	<a href="mailto:editorial%40openweb.eu.org">editorial@openweb.eu.org</a>.
+	<//B_reaction>
+	</p>
+	[(#REM) Forum de l'article ]
+		<a href="#forum" name="forum" id="forum"></a>
+		<INCLURE{fond=inc-forum}{id_article} />
+		[<p class="repondre"><a href="(#PARAMETRES_FORUM|url_reponse_forum)" rel="noindex nofollow"><:repondre_article:></a></p>] 
+      </div>
+
+      [(#REM) Menu de navigation par rubriques ]
+      <INCLURE{fond=inc-rubriques}>
+
+      [(#REM) Pied de page ]
+      <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
+
+    </div>
+  </body>
+</html>
+</BOUCLE_article_principal>

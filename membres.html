@@ -1,0 +1,53 @@
+﻿#CACHE{86400}
+<BOUCLE_article_principal(ARTICLES) {id_article}>
+[(#REM)
+skel membres.html
+1.0 par stef 03/06/2008
+]
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
+  <head>
+    <title>[(#TITRE|textebrut|supprimer_numero) - ][(#NOM_SITE_SPIP|textebrut)]</title>
+    <INCLURE{fond=inc-head}>
+  </head>
+
+  <body>
+    <div id="page">
+
+      <INCLURE{fond=inc-accessible}>
+      <INCLURE{fond=inc-moteur}>
+      <INCLURE{fond=inc-entete}>
+
+      <div id="texte">
+	  
+	  <h2>[(#TITRE|supprimer_numero)]</h2>
+	  
+	  <h3>Administrateurs</h3>
+	  
+	  <ul>
+	  <BOUCLE_admin(AUTEURS){par nom}{statut=0minirezo}{doublons}>
+		<li><a href="#URL_AUTEUR">#NOM</a></li>
+	  </BOUCLE_admin>
+	  </ul>
+
+	  <h3>Auteurs</h3>
+	  <ul>
+	  <BOUCLE_auteurs(AUTEURS){par nom}{doublons}>
+		<li><a href="#URL_AUTEUR">#NOM</a></li>
+	  </BOUCLE_auteurs>
+	  </ul>
+	  
+	  [(#TEXTE|coquette)]
+
+	  </div>
+
+      [(#REM) Menu de navigation par rubriques ]
+      <INCLURE{fond=inc-rubriques}>
+
+      [(#REM) Pied de page ]
+      <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
+
+    </div>
+  </body>
+</html>
+</BOUCLE_article_principal>

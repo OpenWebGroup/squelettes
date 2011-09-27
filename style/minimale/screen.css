@@ -1,0 +1,238 @@
+body{
+margin:2em 1%;
+padding:0;
+}
+
+/* Definitions generales */
+acronym.premier{
+cursor:help;
+}
+
+pre{
+border-left:5px solid #a2c2e1;
+padding:0 1em;
+margin-left:2em;
+}
+
+blockquote,q{
+quotes:'\0000ab\0000a0' '\0000a0\0000bb' '\00201c\0000a0' '\0000a0\00201d';
+}
+
+caption{
+margin:1em 0;
+}
+
+table,td{
+border-collapse:collapse;
+border:1px solid #69c;
+padding:0.2em;
+}
+
+/* Definitions des elements dans l'ordre du code Xhtml */
+#page{
+border:3px solid #fff;
+}
+
+#moteur{
+position:absolute;
+right:6%;
+top:2.7em;
+text-align:right;
+}
+
+#moteurint label{
+display:block;
+text-align:left;
+}
+
+/* --------------- */
+#accessible{
+left:0;
+position:absolute;
+top:0.2em;
+margin:0;
+padding:0;
+}
+
+#accessible ul{
+margin:0 0 0 1em;
+padding:0;
+float:left;
+}
+
+#accessible li{
+display:inline;
+margin:0 1em 0 0;
+}
+
+#habillage label{
+vertical-align:top;
+}
+
+/* --------------- */
+#logo{
+margin:0em 0 0 5%;
+}
+
+/* Page d'accueil uniquement */
+#texteaccueil{
+margin:0 2% 0 20%;
+}
+
+#intro{
+float:right;
+width:30%;
+}
+
+#presentation{
+border:1px solid #69c;
+margin:0 0 1em 0;
+padding:0 0.5em;
+}
+
+#presentation h2{
+/*	margin:0;*/
+}
+
+#humeur{
+border:1px solid #69c;
+margin:0;
+padding:0 0.5em;
+}
+
+/* --------------- */
+#actualite{
+margin-bottom:2em;
+}
+
+#actualite,#articles{
+padding-left:2%;
+padding-right:2%;
+width:100%;
+voice-family:"\"}\"";
+voice-family:inherit;
+width:63%;
+}
+
+html>body #actualite,html>body #articles{
+width:63%;
+}
+
+#humeur h5,#actualite h5,#articles h5{
+text-align:right;
+}
+
+#articles{
+border:1px solid #69c;
+}
+
+/* Pages interieures */
+#texte{
+border:1px solid #69c;
+margin:0 3% 2em 21%;
+padding:0 2%;
+}
+
+#texte a[hreflang]:after {
+content:"\0000a0[" attr(hreflang) "]";
+}
+
+#texte .abstract{
+border:1px dotted #69c;
+margin:0;
+padding:0 1em;
+display:block;
+}
+
+#texte .abstract hr{
+display:block;
+clear:both;
+visibility:hidden;
+}
+
+#texte .auteur{
+margin:1em 0 0 0;
+float:right;
+display:block;
+}
+
+#texte hr{
+display:none;
+}
+
+
+/* Menus */
+#profil{
+position:absolute;
+right:6%;
+text-align:center;
+top:6.4em;
+}
+
+#profil h2{
+border-bottom:3px solid #999;
+margin:0;
+}
+
+#profil ul{
+margin:0;
+padding:3px 0 0 0;
+}
+
+#profil li{
+display:inline;
+margin:0;
+padding:0;
+}
+
+#profil a{
+padding:0 0.5em;
+}
+
+
+/* --------------- */
+#sectionmenus{
+left:2%;
+position:absolute;
+top:12.7em;
+width:17%;
+overflow:hidden;
+}
+
+/* --------------- */
+#technologie ul,#theme ul{
+margin-bottom:1.5em;
+margin-top:0.5em;
+}
+
+#ressources{
+margin:0;
+padding:0;
+}
+
+#ours{
+margin:0 3% 0 21%;
+padding:0 0 1em 0;
+}
+
+#ours ul{
+margin-left:0;
+padding-left:0;
+}
+
+#ours li{
+border-right:1px solid #69c;
+display:inline;
+margin:0 0.5em 0 0;
+padding:0 0.5em 0 0;
+}
+
+#ours li.dernier{
+border-width:0;
+}
+
+/*Page resultat AtomZ */
+#texte .resultat{
+border:1px dotted #69c;
+display:block;
+}

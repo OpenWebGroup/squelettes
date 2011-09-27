@@ -1,0 +1,56 @@
+/*
+ * Comme il est indiqué dans les conditions de réutilisation
+ * (http://openweb.eu.org/openwebgroup/licence/), les éléments
+ * graphiques et le design du site (et donc cette feuille de styles CSS
+ * et les images) restent la propriété exclusive de leurs auteurs
+ * respectifs conformément aux droits d'auteur. Toute réutilisation
+ * devra faire l'objet d'une demande préalable
+ * (email:editorial@openweb.eu.org).
+ * Il est de plus dans votre intêret d'avoir un site au design original,
+ * pour qu'il ait sa propre identité visuelle, plutôt qu'un design
+ * plagié...
+ */
+body{
+background-color:#000;
+color:#ffcc00;
+font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+font-size:small;
+}
+
+hr{
+display:none;;
+}
+
+#menus{
+display:block;
+}
+
+#texteaccueil,#texte{
+border-left:1px solid #fff;
+display:block;
+float:right;
+width:65%;
+padding-left:2%;
+}
+
+a{
+color:#fff;
+background-color:#000;
+}
+
+a:hover{
+color:#000;
+background-color:#fc0;
+}
+
+h1,h2,h3,h4,h5{
+color:#fff;
+}
+
+#texte h2{
+border-bottom:2px solid #fff;
+}
+
+#accessible li{
+display:inline;
+}

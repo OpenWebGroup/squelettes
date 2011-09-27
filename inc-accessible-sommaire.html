@@ -1,0 +1,23 @@
+[(#REM) Barre d'accessibilité en haut de la page]
+<div id="accessible">
+  <ul>
+    <li><a href="/openwebgroup/demarche_accessibilite/">Politique
+            d'accessibilité</a></li>
+    <li><a href="#texteaccueil">Aller au texte</a></li>
+    <li class="dernier"><a href="#sectionmenus">Aller au menu</a></li>
+  </ul>
+
+  <form action="#SELF" method="get" id="switcher">
+    <div id="habillage">
+      <label for="sswitcher">Choisir un habillage&nbsp;:</label>
+      <select id="sswitcher" name="sswitcher">
+        <option value="original" selected="selected">Normal</option>
+        <option value="fondnoir">Fond noir</option>
+        <option value="fondnoir_medium">Fond noir/gros caract&egrave;res</option>
+        <option value="minimale">Minimal</option>
+        <option value="sanshabillage">Sans habillage</option>
+      </select>
+      <input type="submit" value="Ok" />
+    </div>
+  </form>
+</div>

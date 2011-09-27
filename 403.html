@@ -1,0 +1,37 @@
+#CACHE{24 * 3600}
+#HTTP_HEADER{"Cache-Control: no-store, no-cache, must-revalidate"}
+#HTTP_HEADER{Pragma: no-cache}
+
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
+  <head>
+    <title>Accès interdit - [(#NOM_SITE_SPIP|textebrut)]</title>
+    <INCLURE{fond=inc-head}>
+  </head>
+
+  <body>
+    <div id="page">
+
+      <INCLURE{fond=inc-accessible}>
+      <INCLURE{fond=inc-moteur}>
+      <INCLURE{fond=inc-entete}>
+
+      <div id="texte">
+        <h2>Accès interdit</h2>
+
+        <p>Désolé, l'accès la page que vous demandez n'est pas autorisé.</p>
+
+        <p>Si vous êtes arrivé sur cette page en suivant un lien, merci de nous
+        indiquer lequel en écrivant à <a
+          href="mailto:editorial%40openweb.eu.org">editorial@openweb.eu.org</a>.</p>
+      </div>
+
+      [(#REM) Menu de navigation par rubriques ]
+      <INCLURE{fond=inc-rubriques}>
+
+      [(#REM) Pied de page ]
+      <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
+
+    </div>
+  </body>
+</html>

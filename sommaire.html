@@ -1,0 +1,67 @@
+#CACHE{86400}
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
+  <head>
+    <title>[(#NOM_SITE_SPIP|textebrut)]</title>
+    <INCLURE{fond=inc-head}>
+  </head>
+
+  <body>
+    <div id="page">
+
+      <INCLURE{fond=inc-accessible-sommaire}>
+      <INCLURE{fond=inc-moteur}>
+      <INCLURE{fond=inc-entete}>
+
+      <div id="texteaccueil">
+        <div id="intro">
+          <div id="presentation">
+            <h2>Présentation</h2>
+            <BOUCLE_article(ARTICLES){id_article=1}>
+            <p>[(#CHAPO|textebrut)]
+            <a href="#URL_ARTICLE">Présentation complète</a>.</p>
+            </BOUCLE_article>
+          </div>
+
+          <div id="blogs">
+            <h2>Blogs</h2>
+            <ul>
+              <BOUCLE_syndic(SYNDIC_ARTICLES) {age<180}{par date}{inverse}{0,10}>
+              <li><a href="#URL_ARTICLE">[(#TITRE|entites_html)]</a>[ sur (#NOM_SITE)] </li>
+              </BOUCLE_syndic>
+            </ul>
+          </div>
+        </div>
+
+        <div id="actualite">
+          <h2><:dernieres_breves:></h2>
+          <BOUCLE_breves(BREVES) {par date}{inverse} {0,3}>
+          <h3>#TITRE</h3>
+          [<p class="date">le (#DATE|affdate{'d/m/Y'}).</p>]
+          [(#TEXTE|coquette)]
+          </BOUCLE_breves>
+          <p class="tous"><a href="/actualite/">Toutes les actualités</a></p>
+        </div>
+
+        <div id="articles">
+          <h2><:derniers_articles:></h2>
+
+          <dl class="listedocs">
+            <BOUCLE_articles_recents(ARTICLES){par date}{inverse}{0,3}{doublons}>
+            <INCLURE{fond=inc-articlecourt}{id_article}>
+            </BOUCLE_articles_recents>
+          </dl>
+
+          <p class="tous"><a href="/articles/">Tous les articles</a></p>
+        </div>
+      </div>
+
+      [(#REM) Menu de navigation par rubriques ]
+      <INCLURE{fond=inc-rubriques}>
+
+      [(#REM) Pied de page ]
+      <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
+
+    </div>
+  </body>
+</html>

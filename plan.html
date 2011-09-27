@@ -1,0 +1,89 @@
+﻿#CACHE{86400}
+[(#REM)
+skel plan.html
+1.0 par stef 13/05/2008
+1.1 par stef 03/06/2008 : boucles rubriques plus propres
+]
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
+  <head>
+    <title>[(#NOM_SITE_SPIP|textebrut)] - Plan du site</title>
+    <INCLURE{fond=inc-head}>
+  </head>
+
+  <body>
+    <div id="page">
+
+      <INCLURE{fond=inc-accessible}>
+      <INCLURE{fond=inc-moteur}>
+      <INCLURE{fond=inc-entete}>
+
+      <div id="texte">
+	  
+	  <BOUCLE_owGroup(RUBRIQUES){id_rubrique=3}>
+	  <h3>[(#TITRE|supprimer_numero)]</h3>
+		<ul>
+		<BOUCLE_owGroupArticles(ARTICLES){id_rubrique}{par titre}>
+			<li><a href="#URL_ARTICLE">[(#TITRE|supprimer_numero)]</a></li>
+		</BOUCLE_owGroupArticles>
+		</ul>
+	  </BOUCLE_owGroup>
+	  
+	  <h3>Entrées dans le site</h3>
+	  
+	  <BOUCLE_entreeProfil(GROUPES_MOTS){id_groupe=3}>
+	  <h4>#TITRE</h4>
+	  <ul>
+		<BOUCLE_entreeProfilsub(MOTS){id_groupe=3}{par titre}>
+		<li><a href="#URL_MOT">#TITRE</a></li>
+		</BOUCLE_entreeProfilsub>
+	  </ul>
+	  </BOUCLE_entreeProfil>
+      
+	  <BOUCLE_entreeTheme(GROUPES_MOTS){id_groupe=2}>
+	  <h4>#TITRE</h4>
+	  <ul>
+		<BOUCLE_entreeThemesub(MOTS){id_groupe=2}{par titre}>
+		<li><a href="#URL_MOT">#TITRE</a></li>
+		</BOUCLE_entreeThemesub>
+	  </ul>
+	  </BOUCLE_entreeTheme>
+
+	  <BOUCLE_entreeTechno(GROUPES_MOTS){id_groupe=1}>
+	  <h4>#TITRE</h4>
+	  <ul>
+		<BOUCLE_entreeTechnosub(MOTS){id_groupe=1}{par titre}>
+		<li><a href="#URL_MOT">#TITRE</a></li>
+		</BOUCLE_entreeTechnosub>
+	  </ul>
+	  </BOUCLE_entreeTechno>
+
+	  <BOUCLE_articles(RUBRIQUES){racine}{par num titre}{id_rubrique!=3}>
+	  <h3>[(#TITRE|supprimer_numero)]</h3>
+		<ul>
+		<BOUCLE_articlesArticles(ARTICLES){id_rubrique}{par date}{inverse}>
+			<li><a href="#URL_ARTICLE">[(#TITRE|supprimer_numero)]</a>[ ((#DATE|affdate))]</li>
+		</BOUCLE_articlesArticles>
+		</ul>
+	  </BOUCLE_articles>
+	  
+	  <h3>Les membres d'OpenWebGroup</h3>
+	  
+	  <ul>
+	  <BOUCLE_auteurs(AUTEURS){par nom}{tout}>
+		<li><a href="#URL_AUTEUR">#NOM</a></li>
+	  </BOUCLE_auteurs>
+	  </ul>
+
+
+	  </div>
+
+      [(#REM) Menu de navigation par rubriques ]
+      <INCLURE{fond=inc-rubriques}>
+
+      [(#REM) Pied de page ]
+      <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
+
+    </div>
+  </body>
+</html>
