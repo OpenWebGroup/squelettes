@@ -17,7 +17,7 @@ background:#666;
 color:#333;
 font: 500 1em/1.5 Georgia,sans-serif;
 margin:0;
-padding:0;
+padding: 2em 0 1em;
 }
 
 acronym.premier{
@@ -151,8 +151,6 @@ background-color:transparent;
 }
 
 #habillage select{
-background-color:#369;
-color:#fff;
 }
 
 #habillage input{
@@ -178,12 +176,12 @@ text-align:right;
 #moteurint label{
 display:block;
 text-align:left;
-color:#c60;
 background-color:#fff;
 font-weight:700;
 }
 
-#moteur input.champs,#texte form input.champs{
+#moteur input.champs,
+#texte form input.champs{
 color:#333;
 background-color:#fff;
 background-image:url("champs.png");
@@ -194,7 +192,8 @@ font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
 width:12em;
 }
 
-#moteur input.valid,#texte form input.valid{
+#moteur input.valid,
+#texte form input.valid{
 background-color:#f90;
 background-image:url("ok.png");
 background-position:bottom;
@@ -208,7 +207,8 @@ font-weight:700;
 text-align:center;
 }
 
-#moteur input.valid:hover,#texte form input.valid:hover{
+#moteur input.valid:hover,
+#texte form input.valid:hover{
 background-color:#69c;
 background-image:url("oksurvol.png");
 background-position:bottom;
@@ -217,7 +217,8 @@ border:1px solid #369;
 color:#fff;
 }
 
-#moteur input.valid:active,#texte form input.valid:active{
+#moteur input.valid:active,
+#texte form input.valid:active{
 background-color:#9cf;
 background-image:url("okclic.png");
 background-position:bottom;
@@ -735,9 +736,6 @@ color:#c60;
 
 /* Pages intérieures */
 #texte{
-color:#000;
-background-color:#f5f8fc;
-border:1px solid #69c;
 line-height:150%;
 margin:0 3% 2em 21%;
 padding:0 2% 3em 2%;
@@ -748,19 +746,15 @@ content:"\0000a0[" attr(hreflang) "]";
 }
 
 #texte .abstract{
-background-color:#fff;
-background-image:none;
-border:1px dotted #69c;
-color:#333;
+background:#eee;
 margin:0;
-padding:0 1em;
+padding:1em;
 display:block;
 }
 
 #texte .abstract em{
 font-weight:700;
 font-style:normal;
-color:#690;
 background-color:transparent;
 }
 
@@ -832,14 +826,14 @@ list-style-type:circle;
 list-style-type:decimal;
 }
 
-#texte h2,#texte h3,#texte .resultat dt{
+#texte h2,
+#texte h3,
+#texte .resultat dt{
 font-family:Georgia,"Times New Roman",Times,serif;
 }
 
 #texte h2{
-background-color:transparent;
-color:#369;
-font-size:130%;
+font-size:1.25em;
 }
 
 #texte h3 code{
