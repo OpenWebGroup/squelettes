@@ -25,7 +25,8 @@ cursor:help;
 border-bottom:1px dotted #369;
 }
 
-code,pre{
+code,
+pre{
 color:#297700;
 background-color:transparent;
 font-family:"Courier New",Courier,monospace;
@@ -67,16 +68,11 @@ table{
 margin-top:1em;
 }
 
-table,td{
+table,
+td{
 border-collapse:collapse;
 border:1px solid #a2c2e1;
 padding:0.2em;
-}
-
-:focus{
-background-image: none !important;
-background-color:#666 !important;
-color:#fff !important;
 }
 
 /**********************************************************************/
@@ -88,10 +84,9 @@ font-size:1.1em;
 /* Définitions des éléments dans l'ordre du code XHTML */
 #page{
 background: #fff;
-max-width: 100%;
-/* permet de fixer une hauteur mini sur les navigateurs modernes */
-min-height:55em;
 margin: 0 auto;
+max-width: 100%;
+min-height:55em;
 padding: 1em;
 position: relative;
 width: 58em;
@@ -102,7 +97,7 @@ left:0;
 margin:0;
 padding:0;
 position:absolute;
-top:1.75em;
+top:-1.75em;
 width:100%;
 }
 
@@ -230,13 +225,10 @@ background-color:#eee;
 }
 
 #profil{
-background-color:#fff;
-color:#000;
 position:absolute;
-right:6%;
+right:1em;
 text-align:center;
-top:9em;
-width:20.5em;
+top:2em;
 }
 
 #profil h2{
@@ -279,10 +271,10 @@ color:#fff;
 
 /* --------------- */
 #sectionmenus{
-left:3%;
+left:0;
 position:absolute;
-top:15.2em;
-width:17%;
+top:15em;
+width:20%;
 overflow:hidden;
 }
 
@@ -292,23 +284,18 @@ background-color:#fff;
 }
 
 /* --------------- */
-#technologie h2,#theme h2{
-border-bottom: 3px solid;
-font-size:medium;
+#technologie h2,
+#theme h2{
+background: #999;
 font-weight:700;
-margin:0;
-padding-left:0;
-text-transform:uppercase;
+margin:0 0 0 -1em;
+padding-left: 2em;
 }
 
-#technologie h2:first-letter,
-#theme h2:first-letter{
-background-color:transparent;
-}
-
-#technologie ul,#theme ul{
-margin-bottom:1.5em;
-margin-top:0.5em;
+#technologie ul,
+#theme ul{
+margin: 0 0 1.5em;
+padding: 0;
 }
 
 #technologie li,#theme li,#ressources li{
@@ -345,11 +332,6 @@ font-weight:700;
 margin:0;
 padding-left:0em;
 text-transform:uppercase;
-}
-
-#ressources h2:first-letter{
-color:#690;
-background-color:transparent;
 }
 
 #ressources a{
@@ -404,10 +386,7 @@ text-decoration:none;
 
 /* Listes de documents */
 dl.listedocs{
-color:#000;
 background-color:#fff;
-border:1px dotted #69c;
-padding:1em;
 }
 
 dl.listedocs dt{
@@ -803,7 +782,8 @@ font-family:Georgia,"Times New Roman",Times,serif;
 }
 
 #texte h2{
-font-size:1.25em;
+font-size:1.875em;
+color: #766f59;
 }
 
 #texte h3 code{
@@ -894,10 +874,8 @@ margin-bottom: 2em;
 
 /* === Commentaires sur articles === */
 ul.forum {
-background: #fff;
-border: 1px dotted #69c;
 margin: 0;
-padding: 1em;
+padding: 0;
 }
 
 ul.forum  ul{
