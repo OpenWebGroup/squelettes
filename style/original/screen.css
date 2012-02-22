@@ -13,7 +13,7 @@
 
 /* Définitions générales */
 body{
-background:#666;
+background:#c8c4b7;
 color:#333;
 font: 500 1em/1.5 Georgia,sans-serif;
 margin:0;
@@ -88,32 +88,21 @@ font-size:1.1em;
 /* Définitions des éléments dans l'ordre du code XHTML */
 #page{
 background: #fff;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
+max-width: 100%;
 /* permet de fixer une hauteur mini sur les navigateurs modernes */
 min-height:55em;
-/* pour obtenir le même effet sur IE, sachant que si le contenu dépasse, il
-"poussera" la hauteur en ne respectant pas la norme. On se joue de ses lacunes
-*/
-height:55em;
 margin: 0 auto;
-padding: 4em 1em 1em;
+padding: 1em;
 width: 58em;
-}
-
-/* pour rétablir le mauvais effet sur les nav. modernes */
-html>body #page{
-height:auto;
 }
 
 #accessible{
 left:0;
-position:absolute;
-top:0.2em;
-width:100%;
 margin:0;
 padding:0;
+position:absolute;
+top:1.75em;
+width:100%;
 }
 
 #accessible ul{
@@ -139,6 +128,7 @@ text-decoration:none;
 }
 
 #switcher{
+display: none;
 margin:0;
 padding:0;
 }
@@ -148,9 +138,6 @@ vertical-align:top;
 margin-left:0.5em;
 color:#fff;
 background-color:transparent;
-}
-
-#habillage select{
 }
 
 #habillage input{
@@ -168,36 +155,19 @@ cursor:pointer;
 
 #moteur{
 position:absolute;
-right:6%;
-top:4.9em;
+right:0;
+top:-1.75em;
 text-align:right;
-}
-
-#moteurint label{
-display:block;
-text-align:left;
-background-color:#fff;
-font-weight:700;
 }
 
 #moteur input.champs,
 #texte form input.champs{
-color:#333;
-background-color:#fff;
-background-image:url("champs.png");
-background-position:top;
-background-repeat:repeat-x;
-border:1px solid #999;
-font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
 width:12em;
 }
 
 #moteur input.valid,
 #texte form input.valid{
 background-color:#f90;
-background-image:url("ok.png");
-background-position:bottom;
-background-repeat:repeat-x;
 border-color:#c60;
 border-style:solid;
 border-width:1px;
@@ -210,11 +180,7 @@ text-align:center;
 #moteur input.valid:hover,
 #texte form input.valid:hover{
 background-color:#69c;
-background-image:url("oksurvol.png");
-background-position:bottom;
-background-repeat:repeat-x;
 border:1px solid #369;
-color:#fff;
 }
 
 #moteur input.valid:active,
@@ -238,6 +204,10 @@ border:0;
 #logo a{
 color:#000;
 background-color:transparent;
+}
+
+h1{
+margin: 0;
 }
 
 /*#menus{
@@ -294,9 +264,6 @@ font-weight:700;
 }
 
 #profil ul{
-background-image:url("profil.png");
-background-position:top;
-background-repeat:repeat-x;
 margin:0;
 padding:3px 0 0 0;
 }
@@ -568,18 +535,21 @@ color:#369;
 background-color:transparent;
 }
 
-#humeur .listedocs,#articles .listedocs{
+#humeur .listedocs,
+#articles .listedocs{
 border:none;
 margin:0;
 margin-bottom: 0.2em;
 padding:0;
 }
 
-#humeur .listedocs dt,#articles .listedocs dt{
+#humeur .listedocs dt,
+#articles .listedocs dt{
 margin-top:0;
 }
 
-#humeur .listedocs cite,#articles .listedocs cite{
+#humeur .listedocs cite,
+#articles .listedocs cite{
 border-bottom:none;
 }
 
@@ -653,7 +623,8 @@ color:inherit;
 margin-bottom:2em;
 }
 
-#actualite,#articles{
+#actualite,
+#articles{
 padding:0 2%;
 width:100%;
 voice-family:"\"}\"";
@@ -687,16 +658,21 @@ font-weight:500;
 margin:0.2em 0 1em 0;
 }
 
-#actualite p,#articles p{
+#actualite p,
+#articles p{
 margin:0 0 2em 0;
 }
 
-#actualite a,#articles a, .listedocs a{
+#actualite a,
+#articles a,
+.listedocs a{
 background-color:transparent;
 color:#f60;
 }
 
-#actualite a:hover, #articles a:hover, .listedocs a:hover{
+#actualite a:hover,
+#articles a:hover,
+.listedocs a:hover{
 color:#369;
 background-color:transparent;
 text-decoration:none;
@@ -705,7 +681,6 @@ text-decoration:none;
 #articles{
 color:#000;
 background-color:#eff4fa;
-border:1px solid #9cb4ce;
 }
 
 #articles h2{
@@ -736,7 +711,6 @@ color:#c60;
 
 /* Pages intérieures */
 #texte{
-line-height:150%;
 margin:0 3% 2em 21%;
 padding:0 2% 3em 2%;
 }
@@ -797,14 +771,20 @@ color:#690;
 }
 
 /**********************************************************************/
-#texte div.attention, #texte div.important, #texte div.note, #texte div.astuce{
+#texte div.attention,
+#texte div.important,
+#texte div.note,
+#texte div.astuce{
 color:#000;
 background-color:transparent;
 border:1px dotted #69c;
 padding:1em;
 }
 
-#texte span.attention, #texte span.important, #texte span.note, #texte span.astuce{
+#texte span.attention,
+#texte span.important,
+#texte span.note,
+#texte span.astuce{
 font-variant:small-caps;
 font-size:1.1em;
 }
@@ -841,12 +821,10 @@ color:inherit;
 background-color:transparent;
 }
 
-#texte h3,#texte .resultat dt{
-background-color:transparent;
-color:#369;
+#texte h3,
+#texte .resultat dt{
 font-size:small;
 margin:2em 0 0 0;
-line-height:110%;
 }
 
 #texte h4{
