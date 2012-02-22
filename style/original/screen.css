@@ -93,6 +93,7 @@ max-width: 100%;
 min-height:55em;
 margin: 0 auto;
 padding: 1em;
+position: relative;
 width: 58em;
 }
 
@@ -183,18 +184,7 @@ background-color:#69c;
 border:1px solid #369;
 }
 
-#moteur input.valid:active,
-#texte form input.valid:active{
-background-color:#9cf;
-background-image:url("okclic.png");
-background-position:bottom;
-background-repeat:repeat-x;
-border:1px solid #9cb4ce;
-color:#fff;
-}
-
 #logo{
-margin:0 0 0 5%;
 }
 
 #logo img{
