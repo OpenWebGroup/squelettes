@@ -232,7 +232,7 @@ top:2em;
 }
 
 #profil h2{
-border-bottom:3px solid #78705c;
+display:none;
 font-size:small;
 font-weight:500;
 margin:0;
@@ -288,7 +288,7 @@ background-color:#fff;
 #ressources h2{
 background: #999;
 color: #fff;
-font-weight:700;
+font-weight:500;
 margin:0 0 0 -1em;
 padding-left: 2em;
 }
@@ -767,11 +767,12 @@ list-style-type:decimal;
 #texte h2,
 #texte h3,
 #texte .resultat dt{
-font-family:Georgia,"Times New Roman",Times,serif;
+font-family: arial, helvetica, sans-serif;
 }
 
 #texte h2{
 font-size:1.875em;
+font-weight: 500;
 color: #766f59;
 }
 
@@ -782,7 +783,7 @@ background-color:transparent;
 
 #texte h3,
 #texte .resultat dt{
-font-size:small;
+font-size:1.125em;
 margin:2em 0 0 0;
 }
 
