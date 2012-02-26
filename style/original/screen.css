@@ -264,7 +264,7 @@ text-decoration:none;
 }
 
 #profil a:hover{
-background-color:#c8c4B7;
+background-color:#000;
 color:#fff;
 }
 
@@ -283,56 +283,38 @@ background-color:#fff;
 }
 
 /* --------------- */
-#technologie h2,
-#theme h2,
-#ressources h2{
-background: #999;
+
+#sectionmenus h2{
+background: #666;
+background: rgba(0, 0, 0, 0.6);
 color: #fff;
-font-weight:500;
-margin:0 0 0 -1em;
-padding-left: 2em;
+font: 500 1.125em georgia, serif;
+margin:0 0 0 -.8889em;
+padding-left: 1.7778em;
 }
 
-#technologie ul,
-#theme ul{
+#sectionmenus ul{
 margin: 0 0 1.5em;
 padding: 0;
 }
 
-#technologie li,
-#theme li,
-#ressources li{
+#sectionmenus li{
 display:inline;
 list-style:none;
 }
 
-#technologie a,
-#theme a{
+#sectionmenus a{
 display:block;
 margin-left:0;
 padding-left:1em;
 text-decoration:none;
 }
 
-#technologie a:hover,
-#theme a:hover{
+#sectionmenus a:hover{
 background-color:#ccc;
 }
 
-#ressources a{
-color:#690;
-background-color:transparent;
-display:block;
-font-weight:700;
-margin-left:-3em;
-padding-left:1em;
-text-decoration:none;
-}
-
-#ressources a:hover{
-color:#690;
-background-color:#eaf2db;
-}
+/* --------------- */
 
 #ours{
 background:#eee;
@@ -765,7 +747,7 @@ background-color:transparent;
 #texte h3,
 #texte .resultat dt{
 font-size:1.125em;
-margin:2em 0 0 0;
+margin:0;
 }
 
 #texte h4{
