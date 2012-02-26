@@ -20,6 +20,10 @@ margin:0;
 padding: 2em 0 1em;
 }
 
+a {
+color: #1a7096;
+}
+
 acronym.premier{
 cursor:help;
 border-bottom:1px dotted #369;
@@ -31,6 +35,10 @@ color:#297700;
 background-color:transparent;
 font-family:"Courier New",Courier,monospace;
 font-size:small;
+}
+
+#texte pre{
+overflow: auto;
 }
 
 pre{
@@ -186,11 +194,6 @@ border:1px solid #369;
 border:0;
 }
 
-#logo a{
-color:#000;
-background-color:transparent;
-}
-
 h1{
 margin: 0;
 }
@@ -338,14 +341,9 @@ border:0;
 }
 
 #ours a{
-background-color:transparent;
-color:#f60;
 }
 
 #ours a:hover{
-background-color:#eff4fa;
-color:#369;
-text-decoration:none;
 }
 
 /* Listes de documents */
@@ -396,7 +394,6 @@ font-weight:700;
 }
 
 #texteaccueil h3{
-color:#690;
 background-color:transparent;
 font-family:Georgia,"Times New Roman",Times,serif;
 font-size:small;
@@ -483,8 +480,6 @@ border-bottom:none;
 }
 
 #humeur .listedocs dt cite a{
-color:#690;
-background: transparent;
 }
 
 /* ---- debut blog --- */
@@ -566,11 +561,8 @@ width:63%;
 }
 
 #actualite h2{
-border-bottom:2px solid #369;
-color:#369;
 font-size:large;
-background-color:transparent;
-padding:0 0 0.2em 0;
+padding:0;
 }
 
 #actualite h3{
@@ -582,6 +574,7 @@ background-color:transparent;
 
 #actualite p.date{
 margin:0.2em 0 1em 0;
+font-size: .875em;
 }
 
 #actualite p,
@@ -593,7 +586,6 @@ margin:0 0 2em 0;
 #articles a,
 .listedocs a{
 background-color:transparent;
-color:#f60;
 }
 
 #actualite a:hover,
@@ -633,8 +625,8 @@ background-color:#ffecce;
 
 /* Pages intérieures */
 #texte{
-margin:0 3% 2em 21%;
-padding:0 2% 3em 2%;
+margin:0 0 2em 21%;
+padding:0 0 3em 2%;
 }
 
 #texte a[hreflang]:after{
@@ -646,6 +638,10 @@ background:#eee;
 margin:0;
 padding:1em;
 display:block;
+}
+
+#texte .abstract p{
+margin: 0;
 }
 
 #texte .abstract em{
@@ -688,8 +684,6 @@ border-bottom:0;
 }
 
 #texte .auteur strong{
-background-color:transparent;
-color:#690;
 }
 
 /**********************************************************************/
