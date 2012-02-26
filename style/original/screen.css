@@ -336,9 +336,6 @@ background-color:#eaf2db;
 
 #ours{
 background:#eee;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
 padding: 1em;
 }
 
@@ -431,16 +428,12 @@ width:30%;
 }
 
 #presentation{
-color:#000;
 background-color:#ffecce;
-border:1px solid #666;
 margin:0 0 1em 0;
 padding:0.5em 1em;
 }
 
 #presentation h2{
-background-color:transparent;
-color:#c60;
 margin:0;
 }
 
@@ -606,9 +599,6 @@ background-color:transparent;
 
 
 #actualite p.date{
-font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
-font-size:85%;
-font-weight:500;
 margin:0.2em 0 1em 0;
 }
 
@@ -650,16 +640,12 @@ text-align:right;
 
 #texteaccueil p.tous a{
 background-color:#ffecce;
-border:1px solid #c60;
-color:#000;
-font-weight:500;
 padding:0.2em;
 text-decoration:none;
 }
 
 #texteaccueil p.tous a:hover{
 background-color:#ffecce;
-color:#c60;
 }
 
 
