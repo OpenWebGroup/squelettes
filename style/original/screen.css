@@ -189,10 +189,12 @@ border:1px solid #369;
 }
 
 #logo{
+background: url(logo.png) no-repeat 0 0;
 }
 
 #logo img{
 border:0;
+visibility: hidden;
 }
 
 h1{
