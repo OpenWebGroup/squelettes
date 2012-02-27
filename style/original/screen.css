@@ -390,19 +390,6 @@ margin:0.2em 0 0.2em 0;
 margin:0 2% 2em 20%;
 }
 
-#texteaccueil h2{
-font-family:Georgia,"Times New Roman",Times,serif;
-font-size:medium;
-font-weight:700;
-}
-
-#texteaccueil h3{
-background-color:transparent;
-font-family:Georgia,"Times New Roman",Times,serif;
-font-size:small;
-font-weight:700;
-}
-
 #intro{
 float:right;
 margin-left:1%;
@@ -412,7 +399,7 @@ width:30%;
 #presentation{
 background: #ebebeb;
 background: rgba(0, 0, 0, 0.08);
-margin: 0 -4em 0 0;
+margin: 0 -3em 0 0;
 padding: 0.5em 3em 0.5em 1em;
 }
 
@@ -441,11 +428,6 @@ padding:0 1em 1em 1em;
 }
 
 #humeur h2{
-background-color:#eff4fa;
-border-color:#69c;
-border-style:solid;
-border-width:0 1px 1px 1px;
-color:#369;
 margin:0 0 0.5em 0;
 padding:0.4em 0.2em 0.2em 0.2em;
 width:55%;
@@ -453,16 +435,6 @@ width:55%;
 
 #humeur p{
 margin:0;
-}
-
-#humeur a{
-color:#f60;
-background-color:transparent;
-}
-
-#humeur a:hover{
-color:#369;
-background-color:transparent;
 }
 
 #humeur .listedocs,
@@ -565,14 +537,11 @@ width:63%;
 }
 
 #actualite h2{
-font-size:large;
 padding:0;
 }
 
 #actualite h3{
 margin:0;
-color:#69c;
-background-color:transparent;
 }
 
 
@@ -592,14 +561,6 @@ margin:0 0 2em 0;
 background-color:transparent;
 }
 
-#actualite a:hover,
-#articles a:hover,
-.listedocs a:hover{
-color:#369;
-background-color:transparent;
-text-decoration:none;
-}
-
 #articles{
 color:#000;
 background-color:#eff4fa;
@@ -617,13 +578,9 @@ text-align:right;
 }
 
 #texteaccueil p.tous a{
-background-color:#ffecce;
+background-color:#ccc;
 padding:0.2em;
 text-decoration:none;
-}
-
-#texteaccueil p.tous a:hover{
-background-color:#ffecce;
 }
 
 
@@ -859,7 +816,3 @@ div.forum-texte .repondre{
 margin-top: 0;
 text-align: right;
 }
-
-
-
-
