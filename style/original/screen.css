@@ -96,9 +96,9 @@ box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
 margin: 0 auto;
 max-width: 100%;
 min-height:55em;
-padding: 1em;
+padding: 5em;
 position: relative;
-width: 58em;
+width: 50em;
 }
 
 #accessible{
@@ -586,8 +586,8 @@ text-decoration:none;
 
 /* Pages intérieures */
 #texte{
-margin:0 0 2em 21%;
-padding:0 0 3em 2%;
+margin:0 0 2em 20%;
+padding:0 0 3em;
 }
 
 #texte a[hreflang]:after{
@@ -625,19 +625,16 @@ display:block;
 }
 
 #texte .auteur ul{
-color:#000;
-background-color:transparent;
 margin:0 0 0 0.5em;
 padding:0 1em;
-border-left:1px solid #69c;
+border-left:1px solid;
 }
 
 #texte .auteur li{
 font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
 font-size:80%;
-border-bottom:1px dotted #69c;
+border-bottom:1px dotted;
 list-style:none;
-color:#369;
 background-color:transparent;
 }
 
@@ -693,7 +690,6 @@ font-family: arial, helvetica, sans-serif;
 color: #000;
 font-size: 1.875em;
 font-weight: 500;
-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 #texte h3 code{
@@ -724,19 +720,11 @@ font-size:small;
 }
 
 #texte a{
-color:#f60;
-background-color:transparent;
+color: #1a7096;
 }
 
 #texte a:hover{
-color:#369;
-background-color:transparent;
 text-decoration:none;
-}
-
-#texte a:visited{
-color:#369;
-background-color:transparent;
 }
 
 /* Formulaire dans le texte */
