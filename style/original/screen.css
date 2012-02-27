@@ -92,6 +92,7 @@ font-size:1.1em;
 /* Définitions des éléments dans l'ordre du code XHTML */
 #page{
 background: #fff;
+box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
 margin: 0 auto;
 max-width: 100%;
 min-height:55em;
@@ -409,9 +410,10 @@ width:30%;
 }
 
 #presentation{
-background-color:#ffecce;
-margin:0 0 1em 0;
-padding:0.5em 1em;
+background: #ebebeb;
+background: rgba(0, 0, 0, 0.08);
+margin: 0 -4em 0 0;
+padding: 0.5em 3em 0.5em 1em;
 }
 
 #presentation h2{
