@@ -353,34 +353,19 @@ border:0;
 
 /* Listes de documents */
 dl.listedocs{
-background-color:#fff;
 }
 
 dl.listedocs dt{
-font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
-font-size:85%;
-/*font-weight:500;*/
-margin:0.2em 0 0.4em 0;
-background-color:transparent;
-color:#69c;
+font: 500 .8571em Verdana,Geneva,Arial,Helvetica,sans-serif; 
 }
 
 dl.listedocs dt cite{
 display:block;
-font-style:normal;
-font-size:small;
-margin:0;
-margin-bottom:0.2em;
-color:#69c;
-background-color:transparent;
-/*font-weight: 700;*/
-border-bottom:1px dotted #69c;
+font: 500 .8571em Georgia, sans-serif; 
 }
 
 dl.listedocs dd{
-margin:0;
-margin-bottom:1.4em;
-font-weight:500;
+margin:0 0 2em;
 }
 
 dl.listedocs p{
@@ -597,11 +582,19 @@ content:"\0000a0[" attr(hreflang) "]";
 }
 
 #texte .abstract{
-background: #e5e5e5;
-background: rgba(0, 0, 0, 0.1);
+background: #f5f5f5;
+background: rgba(0, 0, 0, 0.04);
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
 display: block;
-margin: 0 -2em 0 0;
-padding: 1em 2em 1em 1em;
+margin: 0;
+padding: 1em;
+}
+
+#texte .abstract h3,
+#texte .abstract hr{
+display: none;
 }
 
 #texte .abstract p{
@@ -614,30 +607,24 @@ font-style:normal;
 background-color:transparent;
 }
 
-#texte .abstract hr{
-display:block;
-clear:both;
-visibility:hidden;
-}
-
 #texte .auteur{
-margin:1em 0 0 0;
-float:right;
+background: #fff;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
 display:block;
+float:right;
+font-size: .75em;
 }
 
 #texte .auteur ul{
-margin:0 0 0 0.5em;
 padding:0 1em;
-border-left:1px solid;
 }
 
 #texte .auteur li{
 font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
 font-size:80%;
-border-bottom:1px dotted;
 list-style:none;
-background-color:transparent;
 }
 
 #texte .auteur li.dernier{
