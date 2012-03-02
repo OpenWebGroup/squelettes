@@ -49,8 +49,6 @@ margin-left:2em;
 
 blockquote,q{
 font-style:italic;
-color:#369;
-background-color:transparent;
 quotes:'\0000ab\0000a0' '\0000a0\0000bb' '\00201c\0000a0' '\0000a0\00201d';
 }
 
@@ -356,12 +354,12 @@ dl.listedocs{
 }
 
 dl.listedocs dt{
-font: 500 .8571em Verdana,Geneva,Arial,Helvetica,sans-serif; 
+font: 500 .75em Verdana,Geneva,Arial,Helvetica,sans-serif; 
 }
 
 dl.listedocs dt cite{
 display:block;
-font: 500 .8571em Georgia, sans-serif; 
+font: 500 1.6667em Georgia, sans-serif; 
 }
 
 dl.listedocs dd{
@@ -623,7 +621,6 @@ padding:0 1em;
 
 #texte .auteur li{
 font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
-font-size:80%;
 list-style:none;
 }
 
@@ -693,12 +690,8 @@ margin:0;
 }
 
 #texte h4{
-font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
-background-color:transparent;
-color:#69c;
 font-weight:700;
 font-size:small;
-border-bottom:1px dotted #a1c2e1;
 }
 
 #texte h5{
