@@ -10,6 +10,10 @@
  * pour qu'il ait sa propre identité visuelle, plutôt qu'un design
  * plagié.
  */
+ 
+#icone_travaux{
+display: none;
+}
 
 /* Définitions générales */
 body{
