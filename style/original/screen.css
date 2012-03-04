@@ -21,7 +21,7 @@ background:#c8c4b7;
 color:#333;
 font: 500 1em/1.5 Georgia,sans-serif;
 margin:0;
-padding: 2em 0 1em;
+padding: 0 0 1em;
 }
 
 a {
@@ -88,7 +88,6 @@ padding:0.2em;
 /**********************************************************************/
 span.patronyme{
 font-variant:small-caps;
-font-size:1.1em;
 }
 
 /* Définitions des éléments dans l'ordre du code XHTML */
@@ -98,7 +97,7 @@ box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
 margin: 0 auto;
 max-width: 100%;
 min-height:55em;
-padding: 3em 5em;
+padding: 5em 3em;
 position: relative;
 width: 50em;
 }
@@ -224,9 +223,9 @@ background-color:#eee;
 
 #profil{
 position:absolute;
-right:1em;
+right:2em;
 text-align:center;
-top:2em;
+top:8em;
 }
 
 #profil h2{
