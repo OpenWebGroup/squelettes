@@ -198,36 +198,32 @@ margin: 0;
 
 }*/
 
-#profil{
+#accueil{
 position:absolute;
 right:2em;
 text-align:center;
 top:8em;
 }
 
-#profil h2{
-display:none;
-}
-
-#profil ul{
+#accueil ul{
 margin:0;
 padding:0;
 }
 
-#profil li{
+#accueil li{
 display:inline;
 margin:0 0 0 .5em;
 padding:0;
 }
 
-#profil a{
+#accueil a{
 color:#686151;
 background-color:transparent;
 padding: .25em;
 text-decoration:none;
 }
 
-#profil a:hover{
+#accueil a:hover{
 background-color:#000;
 color:#fff;
 }
