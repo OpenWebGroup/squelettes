@@ -196,31 +196,6 @@ margin: 0;
 
 }*/
 
-#accueil{
-margin-bottom:1em;
-}
-
-#accueil ul{
-padding:0;
-margin:0;
-}
-
-#accueil li{
-list-style:none;
-margin:0;
-}
-
-#accueil a{
-display:block;
-text-decoration:none;
-background-color:#fff;
-padding-left:1em;
-}
-
-#accueil a:hover{
-background-color:#eee;
-}
-
 #profil{
 position:absolute;
 right:2em;
