@@ -64,14 +64,12 @@ background-color:#d6e1ec;
 
 caption{
 margin:1em 0;
-color:#369;
-background-color:#a1c2e1;
+background-color:#ccc;
 font-weight:700;
 }
 
 thead{
-background-color:#d6e1ec;
-color:#369;
+background-color:#eee;
 }
 
 table{
@@ -81,8 +79,12 @@ margin-top:1em;
 table,
 td{
 border-collapse:collapse;
-border:1px solid #a2c2e1;
+border:1px solid;
 padding:0.2em;
+}
+
+h1, h2, h3, h4, h5, h6{
+font-weight: 500;
 }
 
 /**********************************************************************/
@@ -97,7 +99,7 @@ box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
 margin: 0 auto;
 max-width: 100%;
 min-height:55em;
-padding: 5em 3em;
+padding: 5em 3em 0;
 position: relative;
 width: 50em;
 }
@@ -205,16 +207,6 @@ top:8em;
 
 #profil h2{
 display:none;
-font-size:small;
-font-weight:500;
-margin:0;
-}
-
-#profil h2 em{
-color:#69c;
-background-color:transparent;
-font-style:normal;
-font-weight:700;
 }
 
 #profil ul{
@@ -438,9 +430,11 @@ border-bottom:1px dotted #c8e4e8;
 #blogs ul li:hover{
 background:#5a82bd url("puce_blog.png") no-repeat 0 10px;
 }
+
 #blogs ul li:hover a {
 text-decoration:none;
 }
+
 #blogs a{
 color:#fff;
 background:transparent;
@@ -539,6 +533,10 @@ margin: 0;
 padding: 1em;
 }
 
+#texte p{
+margin:0 0 2em;
+}
+
 #texte .abstract h3,
 #texte .abstract hr{
 display: none;
@@ -621,10 +619,8 @@ list-style-type:decimal;
 }
 
 #texte h2{
-color: #000;
 font-size: 1.875em;
 font-size: 2em;
-font-weight: 500;
 line-height: 1.2;
 }
 
@@ -640,15 +636,9 @@ margin:0;
 }
 
 #texte h4{
-font-weight:700;
-font-size:small;
 }
 
 #texte h5{
-color:#69c;
-background-color:transparent;
-font-weight:500;
-font-size:small;
 }
 
 #texte a{
