@@ -18,7 +18,7 @@ display: none;
 /* Définitions générales */
 body{
 background:#c8c4b7;
-color:#333;
+color:#444;
 font: 500 1em/1.5 Georgia,sans-serif;
 margin:0;
 padding: 0 0 1em;
@@ -332,10 +332,11 @@ width:30%;
 }
 
 #presentation{
-background: #ebebeb;
-background: rgba(0, 0, 0, 0.08);
-margin: 0 -3em 0 0;
-padding: 0.5em 3em 0.5em 1em;
+background: #efede7;
+font-style: italic;
+font-size: .875em;
+margin: 0 -4.5714285714em 0 0;
+padding: 0.5em 2.2857142857em 0.5em 1em;
 }
 
 #presentation h2{
@@ -526,6 +527,7 @@ content:"\0000a0[" attr(hreflang) "]";
 background: #efede7;
 border: solid #575548;
 border-width: 3px 0;
+font-style: italic;
 display: block;
 margin: 0 0 2em;
 padding: 1em;
@@ -553,7 +555,7 @@ background-color:transparent;
 #texte .auteur{
 font-size: .75em;
 margin: 0 0 0.5em;
-text-transform: uppercase;
+font-variant: small-caps;
 }
 
 #texte .auteur ul{
@@ -630,10 +632,11 @@ font-size:1.125em;
 margin:0;
 }
 
-#texte h4{
-}
-
+#texte h4,
 #texte h5{
+font-variant: small-caps;
+font-weight: 700;
+margin: 0;
 }
 
 #texte a{
