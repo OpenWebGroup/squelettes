@@ -35,8 +35,8 @@ border-bottom:1px dotted #369;
 
 code,
 pre{
-color:#297700;
-background-color:transparent;
+color:#666;
+background-color:#fef0c4;
 font-family:"Courier New",Courier,monospace;
 font-size:small;
 }
@@ -46,7 +46,7 @@ overflow: auto;
 }
 
 pre{
-border-left:5px solid #a2c2e1;
+border-left:5px solid #f978a9;
 padding:0.5em 1em;
 margin-left:2em;
 }
@@ -267,7 +267,7 @@ color:#fff;
 
 /* --------------- */
 #sectionmenus{
-left:0;
+left:2em;
 position:absolute;
 top:15em;
 width:20%;
@@ -276,16 +276,12 @@ width:20%;
 /* --------------- */
 
 #sectionmenus h2{
-background: #666;
-background: rgba(0, 0, 0, 0.6);
-color: #fff;
 font: 500 1.125em georgia, serif;
-margin:0 0 0 -.8889em;
-padding-left: 1.7778em;
+margin: 0 0 .5em;
 }
 
 #sectionmenus ul{
-margin: 0 0 1.5em;
+margin: 0 0 2em;
 padding: 0;
 }
 
@@ -297,26 +293,24 @@ list-style:none;
 #sectionmenus a{
 display:block;
 margin-left:0;
-padding-left:1em;
 text-decoration:none;
 }
 
 #sectionmenus a:hover{
-background-color:#ccc;
+text-decoration: underline;
 }
 
 /* --------------- */
 
 #ours{
-background: #ccc;
-background: rgba(0, 0, 0, 0.2);
-margin: 0 -2em;
-padding: 1em 2em;
+background: #efede7;
+margin: 0 -3em;
+padding: 1em 3em;
 }
 
 #ours ul{
-margin-left:0;
-padding-left:0;
+margin:0;
+padding:0;
 }
 
 #ours li{
@@ -552,9 +546,7 @@ text-decoration:none;
 
 /* Pages intérieures */
 #texte{
-margin:0 0 2em 24%;
-
-padding:0 0 3em;
+margin:0 0 3em 24%;
 }
 
 #texte a[hreflang]:after{
