@@ -18,8 +18,8 @@
       <div id="texte">
         <h2>[(#TITRE|supprimer_numero)]</h2>
         [(#CHAPO|?{' ',''})
+        <INCLURE{fond=inc-article-boiteauteurs} {id_article}>
         <div class="abstract">
-         <INCLURE{fond=inc-article-boiteauteurs} {id_article}>
           <h3>En bref</h3>
           [(#CHAPO|coquette)]
           <hr />
