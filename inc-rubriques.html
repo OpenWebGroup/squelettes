@@ -2,17 +2,9 @@
 <INCLURE{fond=inc-liens}>
 <div id="sectionmenus">
 <div id="menus">
-    <div id="technologie">
-      <h2>Technologie</h2>
-      <ul>
-        <BOUCLE_techno(MOTS){type="Technologie"}>
-        <li><a href="#URL_MOT">#TITRE</a></li>
-        </BOUCLE_techno>
-      </ul>
-    </div><!-- #technologie -->
 
 	<div id="profil">
-		<h2>Profil</h2>
+		<h2>Profils</h2>
 		<ul>
 		  <BOUCLE_profil(MOTS){type="Profil"}{par titre}>
 		  <li><a href="#URL_MOT">#TITRE</a></li>
@@ -21,13 +13,22 @@
 	</div><!-- #profil -->
 
     <div id="theme">
-      <h2>Thème</h2>
+      <h2>Thèmes</h2>
       <ul>
         <BOUCLE_theme(MOTS){type="Thème"}>
         <li><a href="#URL_MOT">#TITRE</a></li>
         </BOUCLE_theme>
       </ul>
     </div><!-- #theme -->
+	
+    <div id="technologie">
+      <h2>Technologies</h2>
+      <ul>
+        <BOUCLE_techno(MOTS){type="Technologie"}>
+        <li><a href="#URL_MOT">#TITRE</a></li>
+        </BOUCLE_techno>
+      </ul>
+    </div><!-- #technologie -->
 
     <div id="ressources">
       <h2>Ressources</h2>
