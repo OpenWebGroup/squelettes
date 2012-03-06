@@ -560,10 +560,9 @@ border-bottom:0;
 #texte div.important,
 #texte div.note,
 #texte div.astuce{
-color:#000;
-background-color:transparent;
-border:1px dotted #69c;
-padding:1em;
+background-color: #efede7;
+border-top: 3px solid #575548;
+padding: 1em;
 }
 
 #texte span.attention,
