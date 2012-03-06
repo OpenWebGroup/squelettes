@@ -18,7 +18,7 @@ display: none;
 /* Définitions générales */
 body{
 background:#c8c4b7;
-color:#444;
+color:#333;
 font: 500 1em/1.5 Georgia,sans-serif;
 margin:0;
 padding: 0 0 1em;
@@ -28,14 +28,14 @@ a {
 color: #1a7096;
 }
 
-acronym.premier{
+acronym{
 cursor:help;
 border-bottom:1px dotted #369;
 }
 
 code,
 pre{
-color:#666;
+color:#000;
 background-color:#fef0c4;
 font-family:"Courier New",Courier,monospace;
 font-size:small;
@@ -259,7 +259,8 @@ margin-left:0;
 text-decoration:none;
 }
 
-#sectionmenus a:hover{
+#sectionmenus a:hover,
+#blogs a:hover{
 text-decoration: underline;
 }
 
@@ -392,55 +393,38 @@ border-bottom:none;
 
 /* ---- debut blog --- */
 #blogs{
-color:#fff;
-background:#7595c8;
-border:1px solid #fff;
-border-bottom:10px solid #f90; /* #aeb200; */
+background:#efede7;
 margin:1em 0;
 padding:0.5em 1em;
 padding:0
 }
 
 #blogs h2{
+border-bottom: 2px solid;
 margin:0;
-padding:0.5em 1em
-}
-
-#blogs p{
-margin:0.5em 0;
-color:#fff;
+padding:0;
 }
 
 #blogs ul{
+font-size: .875em;
 list-style:none;
 margin:0;
 padding:0;
-border-bottom: 5px solid #fff;
 }
 
 #blogs ul li{
+font-style: italic;
 margin:0;
-padding:0.7em 0.5em 0.8em 10px;
-border-bottom:1px dotted #c8e4e8;
+padding: .5em 0;
+border-top:1px dashed;
 }
 
-#blogs ul li:hover{
-background:#5a82bd url("puce_blog.png") no-repeat 0 10px;
-}
-
-#blogs ul li:hover a {
-text-decoration:none;
+#blogs ul li:first-child{
+border: 0;
 }
 
 #blogs a{
-color:#fff;
-background:transparent;
-font-weight:700
-}
-
-#blogs a:hover{
-text-decoration:none;
-color: #fff;
+font-style: normal;
 }
 
 /* ---- fin blog --- */
@@ -549,8 +533,8 @@ background-color:transparent;
 }
 
 #texte .auteur{
-font-size: .75em;
-margin: 0 0 0.5em;
+font-size: .875em;
+margin: 0 0 .5em;
 font-variant: small-caps;
 }
 
@@ -612,9 +596,17 @@ list-style-type:decimal;
 }
 
 #texte h2{
+border-top: 2px solid;
+font-size: 1.25em;
+text-transform: uppercase;
+}
+
+#texte h2:first-child{
+border: 0;
 font-size: 1.875em;
 font-size: 2em;
 line-height: 1.2;
+text-transform: none;
 }
 
 #texte h3 code{
@@ -622,17 +614,31 @@ color:inherit;
 background-color:transparent;
 }
 
-#texte h3,
+#texte h3 {
+font: 700 1.5em/normal calibri, arial, sans-serif;
+margin: 0;
+}
+
+#texte h4{
+font: 700 1.125em/normal calibri, arial, sans-serif;
+margin: 0;
+text-transform: uppercase;
+}
+
+#texte h5{
+font: 700 1.375em/normal calibri, arial, sans-serif;
+margin: 0;
+}
+
+#texte h6{
+font: 500 1em/normal calibri, arial, sans-serif;
+margin: 0 0 1em;
+text-transform: uppercase;
+}
+
 #texte .resultat dt{
 font-size:1.125em;
 margin:0;
-}
-
-#texte h4,
-#texte h5{
-font-variant: small-caps;
-font-weight: 700;
-margin: 0;
 }
 
 #texte a{
