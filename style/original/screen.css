@@ -26,6 +26,8 @@ padding: 0 0 1em;
 
 a,
 a.spip_in,
+a.spip_out,
+a.spip_url,
 dt cite a:hover{
 color: #1a7096;
 text-decoration: underline;
@@ -643,7 +645,7 @@ margin: 2em 0 .5em;
 
 #texte h4{
 font: 700 1.125em/normal calibri, arial, sans-serif;
-margin: 2em 0 .5em;
+margin: 0;
 text-transform: uppercase;
 }
 
@@ -740,7 +742,6 @@ padding: 0;
 
 #texte ul.forum li {
 background: #efede7;
-border-bottom: 5px solid #fff;
 list-style: none;
 margin: 0 0 1em;
 padding: 1em;
@@ -767,7 +768,7 @@ div.forum-texte {
 margin: 0 1em;
 }
 
-div.forum-texte .repondre{
+#texte p.repondre{
 margin: 0;
 text-align: right;
 }
