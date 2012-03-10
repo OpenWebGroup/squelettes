@@ -339,13 +339,19 @@ dl.listedocs dd{
 margin:0 0 2em;
 }
 
+dl.listedocs dd:after{
+border-bottom: 2px solid #ddd;
+width: 50%;
+margin: 0 auto;
+}
+
 dl.listedocs p{
 margin:0;
 }
 
 /* Page d'accueil */
 #texteaccueil{
-margin:0 0 2em 20%;
+margin:0 0 4em 20%;
 }
 
 #intro{
@@ -511,7 +517,7 @@ text-decoration:none;
 
 /* Pages intérieures */
 #texte{
-margin:0 0 2em 20%;
+margin:0 0 4em 20%;
 }
 
 #texte a[hreflang]:after{
@@ -658,11 +664,12 @@ margin:0;
 
 /* Formulaire dans le texte */
 #texte form{
-margin:2.5em 0;
+margin:0 0 1em;
 }
 
 #texte form fieldset{
 background: #efede7;
+border-top: 3px solid #2ca9c5;
 border: 0;
 margin: 0 0 1em;
 padding: 1em 2em;
