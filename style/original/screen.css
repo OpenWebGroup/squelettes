@@ -339,11 +339,15 @@ dl.listedocs dd{
 margin:0 0 2em;
 }
 
-dl.listedocs dd:after{
+dl.listedocs dd:before{
 border-bottom: 2px dashed #575548;
 width: 50%;
 display:block;
 content:"";
+}
+
+dl.listedocs dd:first-child:before{
+border: 0;
 }
 
 dl.listedocs p{
@@ -754,6 +758,7 @@ border-radius: 10px;
 display: block;
 font-weight: 700;
 padding: 1em;
+margin: 0 0 1em;
 }
 
 ul.forum small {
@@ -766,6 +771,6 @@ div.forum-texte {
 }
 
 div.forum-texte .repondre{
-margin-top: 0;
+margin: 0;
 text-align: right;
 }
