@@ -340,9 +340,10 @@ margin:0 0 2em;
 }
 
 dl.listedocs dd:after{
-border-bottom: 2px solid #ddd;
+border-bottom: 2px solid #575548;
 width: 50%;
 margin: 0 auto;
+content:"";
 }
 
 dl.listedocs p{
