@@ -49,14 +49,14 @@ font-family:"Courier New",Courier,monospace;
 font-size:small;
 }
 
-#texte pre{
-overflow: auto;
-}
-
 pre{
 border-left:5px solid #f978a9;
 padding:0.5em 1em;
 margin-left:2em;
+}
+
+#texte pre{
+overflow: auto;
 }
 
 blockquote,q{
@@ -93,6 +93,12 @@ padding:0.2em;
 
 h1, h2, h3, h4, h5, h6{
 font-weight: 500;
+}
+
+input[type="submit"]{
+background: #9a9486;
+border: 2px solid #5c574d;
+color: #fff;
 }
 
 /**********************************************************************/
@@ -644,6 +650,7 @@ margin:2.5em 0;
 background: #efede7;
 border: 0;
 margin: 0 0 1em;
+padding: 1em 2em;
 }
 
 #texte form legend{
@@ -709,11 +716,21 @@ padding: 0;
 }
 
 #texte ul.forum li {
+background: #efede7;
+border-bottom: 5px solid #fff;
 list-style: none;
+margin: 0 0 1em;
+padding: 1em;
 }
 
 div.forum-chapo {
+background: #fff;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px; 
+display: block;
 font-weight: 700;
+padding: 1em;
 }
 
 ul.forum small {
