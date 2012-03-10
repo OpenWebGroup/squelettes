@@ -24,16 +24,16 @@
 	
 	#MENU_LANG_ECRIRE
 	
-	<div class="formulaire_spip formulaire_login">
-		#LOGIN_PRIVE
+		<div class="formulaire_spip formulaire_login">
+			#LOGIN_PRIVE
 
-		<p style="text-align: center;">
-		[&#91;<a href="#URL_PAGE{spip_inscription,focus=nom_inscription}&amp;mode=(#URL_SITE_SPIP|tester_config{mode_inscription})" target="spip_pass" onclick="javascript:window.open(this.href, 'spip_pass', 'scrollbars=yes, resizable=yes, width=480, height=400'); return false;"><:login_sinscrire:></a>&#93;]
-		&#91;<a href="#URL_PAGE{spip_pass}" target="spip_pass" onclick="javascript:window.open(this.href, 'spip_pass', 'scrollbars=yes, resizable=yes, width=480, height=330'); return false;"><:login_motpasseoublie:></a>&#93;
-		&#91;<a href="#URL_SITE_SPIP/"><:login_retoursitepublic:></a>&#93;
-		</p>
-	</div>
-      </div>
+			<p style="text-align: center;">
+			[&#91;<a href="#URL_PAGE{spip_inscription,focus=nom_inscription}&amp;mode=(#URL_SITE_SPIP|tester_config{mode_inscription})" target="spip_pass" onclick="javascript:window.open(this.href, 'spip_pass', 'scrollbars=yes, resizable=yes, width=480, height=400'); return false;"><:login_sinscrire:></a>&#93;]
+			&#91;<a href="#URL_PAGE{spip_pass}" target="spip_pass" onclick="javascript:window.open(this.href, 'spip_pass', 'scrollbars=yes, resizable=yes, width=480, height=330'); return false;"><:login_motpasseoublie:></a>&#93;
+			&#91;<a href="#URL_SITE_SPIP/"><:login_retoursitepublic:></a>&#93;
+			</p>
+		</div><!-- #formulaire_spip formulaire_login -->
+      </div><!-- #texte -->
 
       [(#REM) Menu de navigation par rubriques ]
       <INCLURE{fond=inc-rubriques}>
@@ -41,6 +41,6 @@
       [(#REM) Pied de page ]
       <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
 
-    </div>
+    </div><!-- #page -->
   </body>
 </html>

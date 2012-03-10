@@ -38,7 +38,7 @@ text-decoration: none;
 
 acronym{
 cursor:help;
-border-bottom:1px dotted #369;
+border-bottom:1px dotted;
 }
 
 code,
@@ -351,16 +351,10 @@ margin:0.5em 0;
 
 #presentation a{
 color:#c60;
-background-color:transparent;
-}
-
-#presentation a:hover{
-color:#369;
-background-color:transparent;
 }
 
 #humeur{
-border:1px solid #6699cc;
+border:1px solid #69c;
 margin:0;
 padding:0 1em 1em 1em;
 }
@@ -646,38 +640,52 @@ margin:0;
 margin:2.5em 0;
 }
 
+#texte form fieldset{
+background: #efede7;
+border: 0;
+}
+
+#texte form ul{
+margin: 0;
+padding: 0;
+}
+
+#texte form li{
+list-style: none;
+}
+
 #texte form label{
-color:#369;
-background-color:transparent;
+display:block;
+font-weight: 700;
 margin:0.5em 0;
 }
 
 .formulaire_ecrire_auteur fieldset {
-  display: table;
+display: table;
 }
 
 .formulaire_ecrire_auteur p {
-  display: table-row;
+display: table-row;
 }
 .formulaire_ecrire_auteur p.spip_bouton {
-  display: block;
+display: block;
 }
 
 .formulaire_ecrire_auteur label,
 .formulaire_ecrire_auteur input,
 .formulaire_ecrire_auteur textarea {
-  display: table-cell;
-  vertical-align: top;
+display: table-cell;
+vertical-align: top;
 }
 
 /* .formulaire_ecrire_auteur label {
-  max-width: 3ex;
+max-width: 3ex;
 }
 
 .formulaire_ecrire_auteur input,
 .formulaire_ecrire_auteur textarea {
-  min-width: 30ex;
-  width: auto;
+min-width: 30ex;
+width: auto;
 } */
 
 p.reaction {
@@ -700,7 +708,6 @@ list-style: none;
 }
 
 div.forum-chapo {
-color: #369;
 font-weight: 700;
 }
 
