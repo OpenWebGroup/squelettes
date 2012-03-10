@@ -643,6 +643,11 @@ margin:2.5em 0;
 #texte form fieldset{
 background: #efede7;
 border: 0;
+margin: 0 0 1em;
+}
+
+#texte form legend{
+text-transform: uppercase;
 }
 
 #texte form ul{
