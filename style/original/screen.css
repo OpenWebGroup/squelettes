@@ -368,7 +368,7 @@ background: #efede7;
 font-style: italic;
 font-size: .875em;
 margin: 0 -3.428571428571429em 0 0;
-padding: 0.5em 2.2857142857em 0.5em 1em;
+padding: 0.5em 3.428571428571429em 0.5em 1em;
 }
 
 #presentation h2{
@@ -570,6 +570,14 @@ margin: 0;
 #texte .auteur li{
 list-style:none;
 display: inline;
+}
+
+#texte .auteur li:before{
+content: "—";
+}
+
+#texte .auteur li:first-child:before{
+content: "";
 }
 
 #texte .auteur li.dernier{
