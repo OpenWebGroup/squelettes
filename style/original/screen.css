@@ -233,7 +233,7 @@ color:#fff;
 left:2em;
 position:absolute;
 top:15em;
-width:20%;
+width:17.91666666666667%;
 }
 
 /* --------------- */
@@ -319,7 +319,7 @@ margin:0;
 
 /* Page d'accueil */
 #texteaccueil{
-margin:0 2% 2em 20%;
+margin:0 0 2em 20%;
 }
 
 #intro{
@@ -496,7 +496,7 @@ text-decoration:none;
 
 /* Pages intérieures */
 #texte{
-margin:0 0 3em 24%;
+margin:0 0 2em 20%;
 }
 
 #texte a[hreflang]:after{
