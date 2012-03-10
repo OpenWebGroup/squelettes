@@ -764,6 +764,7 @@ div.forum-message {
 }
 
 div.forum-texte {
+margin: 0 1em;
 }
 
 div.forum-texte .repondre{
