@@ -575,7 +575,7 @@ display: inline;
 }
 
 #texte .auteur li:before{
-content: "—";
+content: "â€”";
 }
 
 #texte .auteur li:first-child:before{
