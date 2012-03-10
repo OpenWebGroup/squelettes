@@ -598,6 +598,7 @@ list-style-type:decimal;
 border-top: 2px solid;
 font-size: 1.25em;
 text-transform: uppercase;
+line-height: 2em;
 }
 
 #texte h2:first-child{
@@ -638,14 +639,6 @@ text-transform: uppercase;
 #texte .resultat dt{
 font-size:1.125em;
 margin:0;
-}
-
-#texte a{
-color: #1a7096;
-}
-
-#texte a:hover{
-text-decoration:none;
 }
 
 /* Formulaire dans le texte */
