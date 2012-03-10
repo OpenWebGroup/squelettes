@@ -339,15 +339,11 @@ dl.listedocs dd{
 margin:0 0 2em;
 }
 
-dl.listedocs dd:before{
+dl.listedocs dd:after{
 border-bottom: 2px dashed #575548;
 width: 50%;
 display:block;
 content:"";
-}
-
-dl.listedocs dd:first-child:before{
-border: 0;
 }
 
 dl.listedocs p{
