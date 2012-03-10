@@ -24,8 +24,16 @@ margin:0;
 padding: 0 0 1em;
 }
 
-a {
+a,
+a.spip_in,
+dt cite a:hover{
 color: #1a7096;
+text-decoration: underline;
+}
+
+dt cite a,
+a:hover{
+text-decoration: none;
 }
 
 acronym{
@@ -248,12 +256,10 @@ padding: 0;
 }
 
 #sectionmenus li{
-display:inline;
 list-style:none;
 }
 
 #sectionmenus a{
-display:block;
 margin-left:0;
 text-decoration:none;
 }
@@ -387,13 +393,9 @@ margin-top:0;
 border-bottom:none;
 }
 
-#humeur .listedocs dt cite a{
-}
-
 /* ---- debut blog --- */
 #blogs{
 margin:1em 0;
-padding:0.5em 1em;
 padding:0
 }
 
