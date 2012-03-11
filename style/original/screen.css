@@ -26,6 +26,16 @@ margin:0;
 padding: 0 0 1em;
 }
 
+::-moz-selection {
+background: #ff4f9b;
+color: #fff;
+}
+
+::selection {
+background: #ff4f9b;
+color: #fff;
+}
+
 a,
 a.spip_in,
 a.spip_out,
@@ -46,11 +56,11 @@ border-bottom:1px dotted;
 }
 
 code,
-pre{
+pre,
+kbd{
 color:#000;
 background-color:#fef0c4;
 font-family:"Courier New",Courier,monospace;
-font-size:small;
 }
 
 pre{
@@ -363,11 +373,8 @@ font: 500 1.6667em Georgia, sans-serif;
 margin: 0 0 .25em;
 }
 
-dl.listedocs dd{
-margin:0;
-}
-
-dl.listedocs p{
+dl.listedocs dd,
+#texte dl.listedocs p{
 margin:0;
 }
 
@@ -665,6 +672,7 @@ margin: 2em 0 .5em;
 }
 
 #texte h4{
+color: #db2976;
 font: 700 1.125em/normal calibri, arial, sans-serif;
 margin: 0;
 }
