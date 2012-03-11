@@ -97,6 +97,7 @@ padding:0.2em;
 
 h1, h2, h3, h4, h5, h6{
 font-weight: 500;
+margin: 0;
 }
 
 input,
@@ -140,7 +141,6 @@ background: #fff;
 box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
 margin: 0 auto;
 max-width: 98%;
-min-height:55em;
 padding: 0 3em;
 position: relative;
 width: 54em;
@@ -272,7 +272,7 @@ color:#fff;
 /* --------------- */
 #sectionmenus{
 margin: 2em 0 0;
-width:17.91666666666667%;
+width:20%;
 }
 
 /* --------------- */
@@ -485,16 +485,6 @@ margin-bottom:2em;
 
 #actualite,
 #articles{
-padding:0 2%;
-width:100%;
-voice-family:"\"}\"";
-voice-family:inherit;
-width:63%;
-}
-
-html>body #actualite,
-html>body #articles{
-width:63%;
 }
 
 #actualite h2{
