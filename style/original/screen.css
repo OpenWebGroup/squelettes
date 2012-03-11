@@ -386,7 +386,7 @@ width: 75%;
 
 #intro{
 float:right;
-margin-left:1%;
+margin-left:2.2222222222%;
 width:30%;
 }
 
@@ -394,8 +394,8 @@ width:30%;
 background: #efede7;
 font-style: italic;
 font-size: .875em;
-margin: 0 -3.428571428571429em 0 0;
-padding: 0.5em 3.428571428571429em 0.5em 1em;
+margin: 0 -22.2222222222% 0 0;
+padding: 0.5em 22.2222222222% 0.5em 1em;
 }
 
 #presentation h2{
