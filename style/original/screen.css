@@ -336,9 +336,17 @@ border:0;
 dl.listedocs{
 }
 
+dl.listedocs dt:before{
+border-top: 1px dashed #575548;
+content:"";
+display:block;
+width: 50%;
+}
+
 dl.listedocs dt{
 font: 500 .75em Verdana, Geneva, Arial, Helvetica, sans-serif;
-margin: 0 0 1em;
+margin: 2em 0;
+padding: 1em 0 0;
 }
 
 dl.listedocs dt cite{
@@ -348,14 +356,7 @@ margin: 0 0 .25em;
 }
 
 dl.listedocs dd{
-margin:0 0 2em;
-}
-
-dl.listedocs dd:after{
-border-bottom: 1px dashed #575548;
-content:"";
-display:block;
-width: 50%;
+margin:0;
 }
 
 dl.listedocs p{
