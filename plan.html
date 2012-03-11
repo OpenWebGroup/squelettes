@@ -4,7 +4,7 @@ skel plan.html
 1.0 par stef 13/05/2008
 1.1 par stef 03/06/2008 : boucles rubriques plus propres
 ]
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
   <head>
     <title>[(#NOM_SITE_SPIP|textebrut)] - Plan du site</title>
@@ -77,7 +77,7 @@ skel plan.html
 	  </ul>
 
 
-	  </div>
+	  </div><!-- #texte -->
 
       [(#REM) Menu de navigation par rubriques ]
       <INCLURE{fond=inc-rubriques}>
@@ -85,6 +85,6 @@ skel plan.html
       [(#REM) Pied de page ]
       <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
 
-    </div>
+    </div><!-- #page -->
   </body>
 </html>
