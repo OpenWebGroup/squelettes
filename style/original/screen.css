@@ -352,10 +352,10 @@ margin:0 0 2em;
 }
 
 dl.listedocs dd:after{
-border-bottom: 2px dashed #575548;
-width: 50%;
-display:block;
+border-bottom: 1px dashed #575548;
 content:"";
+display:block;
+width: 50%;
 }
 
 dl.listedocs p{
