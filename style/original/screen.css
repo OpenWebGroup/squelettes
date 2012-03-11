@@ -130,8 +130,9 @@ font-variant:small-caps;
 #bandeau{
 background: #efede7 url(page.png) no-repeat 0 0;
 border-bottom: 5px solid #575548;
-position: relative;
+margin: 0 -3em;
 min-height: 11em;
+position: relative;
 }
 
 #page{
@@ -140,7 +141,7 @@ box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
 margin: 0 auto;
 max-width: 98%;
 min-height:55em;
-padding: 5em 3em 0;
+padding: 0 3em;
 position: relative;
 width: 54em;
 }
