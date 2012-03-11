@@ -8,10 +8,11 @@
 
   <body>
     <div id="page">
-
-      <INCLURE{fond=inc-accessible-sommaire}>
-      <INCLURE{fond=inc-moteur}>
-      <INCLURE{fond=inc-entete}>
+		<div id="bandeau">
+			<INCLURE{fond=inc-accessible-sommaire}>
+			<INCLURE{fond=inc-moteur}>
+			<INCLURE{fond=inc-entete}>
+		</div><!-- #bandeau -->
 
       <div id="texteaccueil">
         <div id="intro">
@@ -21,7 +22,7 @@
             <p>[(#CHAPO|textebrut)]
             <a href="#URL_ARTICLE">Présentation complète</a>.</p>
             </BOUCLE_article>
-          </div>
+          </div><!-- #presentation -->
 
           <div id="blogs">
             <h2>Blogs</h2>
@@ -30,8 +31,8 @@
               <li><a href="#URL_ARTICLE">[(#TITRE|entites_html)]</a>[ sur (#NOM_SITE)] </li>
               </BOUCLE_syndic>
             </ul>
-          </div>
-        </div>
+          </div><!-- #blogs -->
+        </div><!-- #intro -->
 
         <div id="actualite">
           <h2><:dernieres_breves:></h2>
@@ -41,7 +42,7 @@
           [(#TEXTE|coquette)]
           </BOUCLE_breves>
           <p class="tous"><a href="/actualite/">Toutes les actualités</a></p>
-        </div>
+        </div><!-- #actualite -->
 
         <div id="articles">
           <h2><:derniers_articles:></h2>
@@ -53,8 +54,8 @@
           </dl>
 
           <p class="tous"><a href="/articles/">Tous les articles</a></p>
-        </div>
-      </div>
+        </div><!-- #articles -->
+      </div><!-- #texteaccueil -->
 
       [(#REM) Menu de navigation par rubriques ]
       <INCLURE{fond=inc-rubriques}>

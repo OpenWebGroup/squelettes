@@ -1,23 +1,23 @@
 @charset "UTF-8";
 
 /*
- * Comme il est indiqué dans les conditions de réutilisation
- * (http://openweb.eu.org/openwebgroup/licence/), les éléments
+ * Comme il est indiquÃ© dans les conditions de rÃ©utilisation
+ * (http://openweb.eu.org/openwebgroup/licence/), les Ã©lÃ©ments
  * graphiques et le design du site (et donc cette feuille de styles CSS
- * et les images) restent la propriété exclusive de leurs auteurs
- * respectifs conformément aux droits d'auteur. Toute réutilisation
- * devra faire l'objet d'une demande préalable
+ * et les images) restent la propriÃ©tÃ© exclusive de leurs auteurs
+ * respectifs conformÃ©ment aux droits d'auteur. Toute rÃ©utilisation
+ * devra faire l'objet d'une demande prÃ©alable
  * (email:editorial@openweb.eu.org).
- * Il est de plus dans votre intérêt d'avoir un site au design original,
- * pour qu'il ait sa propre identité visuelle, plutôt qu'un design
- * plagié.
+ * Il est de plus dans votre intÃ©rÃªt d'avoir un site au design original,
+ * pour qu'il ait sa propre identitÃ© visuelle, plutÃ´t qu'un design
+ * plagiÃ©.
  */
  
 #icone_travaux{
 display: none;
 }
 
-/* Définitions générales */
+/* DÃ©finitions gÃ©nÃ©rales */
 body{
 background:#c8c4b7;
 color:#333;
@@ -125,9 +125,17 @@ span.patronyme{
 font-variant:small-caps;
 }
 
-/* Définitions des éléments dans l'ordre du code XHTML */
+/* DÃ©finitions des Ã©lÃ©ments dans l'ordre du code XHTML */
+
+#bandeau{
+background: #efede7 url(page.png) no-repeat 0 0;
+border-bottom: 5px solid #575548;
+position: relative;
+min-height: 11em;
+}
+
 #page{
-background: #fff url(page.png) no-repeat 0 0;
+background: #fff;
 box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
 margin: 0 auto;
 max-width: 98%;
@@ -144,7 +152,6 @@ margin:0;
 padding:0;
 position:absolute;
 top:1.5em;
-width:100%;
 }
 
 #accessible ul{
@@ -520,7 +527,7 @@ text-decoration:none;
 }
 
 
-/* Pages intérieures */
+/* Pages intÃ©rieures */
 #texte{
 margin:0 0 4em 20%;
 }
@@ -575,7 +582,7 @@ display: inline;
 }
 
 #texte .auteur li:before{
-content: "â€”";
+content: " â€” ";
 }
 
 #texte .auteur li:first-child:before{
