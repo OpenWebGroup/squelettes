@@ -130,7 +130,7 @@ font-variant:small-caps;
 #bandeau{
 background: #efede7 url(page.png) no-repeat 0 0;
 border-bottom: 5px solid #575548;
-margin: 0 -3em;
+margin: 0 -3em 1em;
 min-height: 11em;
 position: relative;
 }
@@ -271,8 +271,7 @@ color:#fff;
 
 /* --------------- */
 #sectionmenus{
-position:absolute;
-top:15em;
+margin: 2em 0 0;
 width:17.91666666666667%;
 }
 
@@ -306,6 +305,7 @@ text-decoration: underline;
 
 #ours{
 background: #efede7;
+clear:both;
 margin: 0 -3em;
 padding: 1em 3em;
 }
@@ -353,7 +353,7 @@ padding: 1em 0 0;
 dl.listedocs dt:first-child,
 dl.listedocs dt:first-child:before{
 border: 0;
-margin: 0;
+margin: 0;	
 padding: 0;
 }
 
@@ -373,7 +373,9 @@ margin:0;
 
 /* Page d'accueil */
 #texteaccueil{
-margin:0 0 4em 20%;
+float: right;
+margin: 0 0 4em;
+width: 80%;
 }
 
 #intro{
@@ -539,7 +541,9 @@ text-decoration:none;
 
 /* Pages intérieures */
 #texte{
-margin:0 0 4em 20%;
+float: right;
+margin: 0 0 4em;
+width: 80%;
 }
 
 #texte a[hreflang]:after{
