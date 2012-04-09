@@ -48,9 +48,7 @@
 	<//B_reaction>
 	</p>
 	[(#REM) Forum de l'article ]
-		<a href="#forum" name="forum" id="forum"></a>
-		<INCLURE{fond=inc-forum}{id_article} />
-		[<p class="repondre"><a href="(#PARAMETRES_FORUM|url_reponse_forum)" rel="noindex nofollow"><:repondre_article:></a></p>] 
+		<INCLURE{fond=comments,id_article} />
       </div>
 
       [(#REM) Menu de navigation par rubriques ]
