@@ -239,6 +239,8 @@ float:left;
 #logo img{
 border:0;
 visibility: hidden;
+float:none;
+margin:0;
 }
 
 h1{
