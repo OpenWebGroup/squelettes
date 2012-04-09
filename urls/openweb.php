@@ -83,6 +83,24 @@ function urls_openweb_dist($i, $entite, $args='', $ancre='') {
 		$contexte['page'] = 'plan';
 		return array($contexte, 'plan', null, null);
 	}
+	elseif (strncmp($i,"/recherche/",11)==0){
+		// recuperer les &debut_xx;
+		if (is_array($args))
+			$contexte = $args;
+		else
+			parse_str($args,$contexte);
+		$contexte['page'] = 'recherche';
+		return array($contexte, 'recherche', null, null);
+	}
+	elseif (strncmp($i,"/actualite/",11)==0){
+		// recuperer les &debut_xx;
+		if (is_array($args))
+			$contexte = $args;
+		else
+			parse_str($args,$contexte);
+		$contexte['page'] = 'actualites';
+		return array($contexte, 'actualites', null, null);
+	}
 
 
 	$urls_arbo = charger_fonction("arbo","urls");
