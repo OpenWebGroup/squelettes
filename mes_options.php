@@ -28,3 +28,4 @@ return $letexte;
 }
 
 $quota_cache = 100;
+_chemin(_DIR_RACINE."squelettes/style/original");
