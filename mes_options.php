@@ -1,6 +1,5 @@
 <?php
 //$type_urls = "openweb";
-$toujours_paragrapher = true;
 
 // La coquette se passe des class="spip" !
 // Cf.: http://romy.tetue.net/spip.php?article415
@@ -29,7 +28,3 @@ return $letexte;
 }
 
 $quota_cache = 100;
-
-function autoriser_travaux($faire,$quoi,$id,$qui){
-        return intval($qui['id_auteur'])?true:false;
-}
