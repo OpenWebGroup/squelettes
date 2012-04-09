@@ -74,6 +74,16 @@ function urls_openweb_dist($i, $entite, $args='', $ancre='') {
 		$res = $urls_propres($i, $entite, $args, $ancre);
 		return $res;
 	}
+	elseif (strpos($i,"/openwebgroup/plan/")!==false){
+		// recuperer les &debut_xx;
+		if (is_array($args))
+			$contexte = $args;
+		else
+			parse_str($args,$contexte);
+		$contexte['page'] = 'plan';
+		return array($contexte, 'plan', null, null);
+	}
+
 
 	$urls_arbo = charger_fonction("arbo","urls");
 	return $urls_arbo($i, $entite, $args, $ancre);
