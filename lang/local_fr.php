@@ -36,6 +36,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'question_remark' => 'Une question, une remarque&nbsp;? Écrivez &agrave;',
 	'resources' => 'Ressources',
 	'search' => 'rechercher',
+	'search_no_results' => 'D&eacute;sol&eacute;, votre recherche n\'a donn&eacute; aucun r&eacute;sultat sur OpenWeb.',
 	'sitemap' => 'Plan du site',
 	'skip_to_menu' => 'Aller au menu',
 	'skip_to_text' => 'Aller au texte',
