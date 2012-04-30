@@ -24,7 +24,7 @@ skel membres.html
 	  
 	  <h2>[(#TITRE|supprimer_numero)]</h2>
 	  
-	  <h3>Administrateurs</h3>
+	  <h3><:administrators:></h3>
 	  
 	  <ul>
 	  <BOUCLE_admin(AUTEURS){par nom}{statut=0minirezo}{doublons}>
@@ -32,7 +32,7 @@ skel membres.html
 	  </BOUCLE_admin>
 	  </ul>
 
-	  <h3>Auteurs</h3>
+	  <h3><:auteurs:></h3>
 	  <ul>
 	  <BOUCLE_auteurs(AUTEURS){par nom}{doublons}>
 		<li><a href="#URL_AUTEUR">#NOM</a></li>
