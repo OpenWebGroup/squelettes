@@ -22,7 +22,7 @@
         [(#CHAPO|?{' ',''})
         <INCLURE{fond=inc-article-boiteauteurs} {id_article}>
         <div class="abstract">
-          <h3>En bref</h3>
+          <h3><:abstract:></h3>
           [(#CHAPO|coquette)]
           <hr />
         </div>
@@ -37,10 +37,10 @@
 
         <hr />
         <p class="reaction">
-	Une question, une remarque ? Écrivez à
+	<:question_remark:>
 	<B_reaction>
 	<BOUCLE_reaction(AUTEURS){id_article}{0,1}>
-	[(#EMAIL|?{<a href="#URL_AUTEUR">l'auteur</a>,
+	[(#EMAIL|?{<a href="#URL_AUTEUR"><:auteur:></a>,
 	<a href="mailto:editorial%40openweb.eu.org">editorial@openweb.eu.org</a>})].
 	</BOUCLE_reaction>
 	</B_reaction>
