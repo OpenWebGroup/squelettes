@@ -1,6 +1,6 @@
 <BOUCLE_article(ARTICLES){id_article}>
 <dt><cite><a href="#URL_ARTICLE">[(#TITRE|supprimer_numero)]</a></cite>
-[<:par_auteur:> (#LESAUTEURS), ][le (#DATE|affdate{'d/m/Y'})]<B_mots>
-pour <BOUCLE_mots(MOTS){id_article}{", "}><a href="#URL_MOT">#TITRE</a></BOUCLE_mots></B_mots>.</dt>
+[<:par_auteur:> (#LESAUTEURS), ][<:le_date:> (#DATE|affdate{'d/m/Y'})]<B_mots>
+<:for:> <BOUCLE_mots(MOTS){id_article}{", "}><a href="#URL_MOT">#TITRE</a></BOUCLE_mots></B_mots>.</dt>
 <dd>[(#CHAPO|coquette)]</dd>
 </BOUCLE_article>

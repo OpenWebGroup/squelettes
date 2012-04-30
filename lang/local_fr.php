@@ -11,6 +11,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'articles_none' => 'Aucun article n\'a &eacute;t&eacute; publi&eacute; pour l\'instant.',
 	'auteur' => 'Auteur',
 	'auteur_le' => 'l\'auteur',
+	'for' => 'pour',
 	'forbidden_access' => 'Acc&egrave;s interdit',
 	'humeurs' => 'Humeurs',
 	'humeurs_all' => 'Tous les billets d\'humeur',
