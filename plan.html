@@ -7,7 +7,7 @@ skel plan.html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
   <head>
-    <title>[(#NOM_SITE_SPIP|textebrut)] - Plan du site</title>
+    <title>[(#NOM_SITE_SPIP|textebrut)] - <:sitemap:></title>
     <INCLURE{fond=inc-head}>
   </head>
 
@@ -30,7 +30,7 @@ skel plan.html
 		</ul>
 	  </BOUCLE_owGroup>
 	  
-	  <h3>Entrées dans le site</h3>
+	  <h3><:entry_points:></h3>
 	  
 	  <BOUCLE_entreeProfil(GROUPES_MOTS){id_groupe=3}>
 	  <h4>#TITRE</h4>
@@ -68,7 +68,7 @@ skel plan.html
 		</ul>
 	  </BOUCLE_articles>
 	  
-	  <h3>Les membres d'OpenWebGroup</h3>
+	  <h3><:members:></h3>
 	  
 	  <ul>
 	  <BOUCLE_auteurs(AUTEURS){par nom}{tout}>
