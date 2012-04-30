@@ -24,6 +24,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'openweb_title' => 'OpenWeb, Comprendre &amp; apprendre le Web ouvert',
 	'page_not_found' => 'Page non trouv&eacute;e',
 	'question_remark' => 'Une question, une remarque&nbsp;? Écrivez &agrave;',
+	'search' => 'rechercher',
 	'sitemap' => 'Plan du site',
 	'skip_to_menu' => 'Aller au menu',
 	'skip_to_text' => 'Aller au texte',
