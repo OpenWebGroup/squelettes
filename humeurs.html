@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
   <head>
-    <title>Humeurs - [(#NOM_SITE_SPIP|textebrut)]</title>
+    <title><:humeurs:> - [(#NOM_SITE_SPIP|textebrut)]</title>
     <INCLURE{fond=inc-head}>
   </head>
 
@@ -16,7 +16,7 @@
 		</div><!-- #bandeau -->
 
       <div id="texte">
-        <h2>Tous les billets d'humeur</h2>
+        <h2><:humeurs_all:></h2>
         <B_articles>
         <dl class="listedocs">
           <BOUCLE_articles(ARTICLES){type="Humeurs"}{par popularite}{inverse}>
@@ -24,7 +24,7 @@
           </BOUCLE_articles>
         </dl>
         </B_articles>
-        <p>Aucun article n'a été publié pour l'instant.</p>
+        <p><:articles_none:></p>
         <//B_articles>
       </div>
 
