@@ -17,18 +17,18 @@
       <div id="texteaccueil">
         <div id="intro">
           <div id="presentation">
-            <h2>Présentation</h2>
+            <h2><:presentation:></h2>
             <BOUCLE_article(ARTICLES){id_article=1}>
             <p>[(#CHAPO|textebrut)]
-            <a href="#URL_ARTICLE">Présentation complète</a>.</p>
+            <a href="#URL_ARTICLE"><:presentation_full:></a>.</p>
             </BOUCLE_article>
           </div><!-- #presentation -->
 
           <div id="blogs">
-            <h2>Blogs</h2>
+            <h2><:blogs:></h2>
             <ul>
               <BOUCLE_syndic(SYNDIC_ARTICLES) {age<180}{par date}{inverse}{0,5}>
-              <li><a href="#URL_ARTICLE">[(#TITRE|entites_html)]</a>[ sur (#NOM_SITE)] </li>
+              <li><a href="#URL_ARTICLE">[(#TITRE|entites_html)]</a>[ <:on:> (#NOM_SITE)] </li>
               </BOUCLE_syndic>
             </ul>
           </div><!-- #blogs -->
@@ -38,10 +38,10 @@
           <h2><:dernieres_breves:></h2>
           <BOUCLE_breves(BREVES) {par date}{inverse} {0,3}>
           <h3>#TITRE</h3>
-          [<p class="date">le (#DATE|affdate{'d/m/Y'}).</p>]
+          [<p class="date"><:le_date:> (#DATE|affdate{'d/m/Y'}).</p>]
           [(#TEXTE|coquette)]
           </BOUCLE_breves>
-          <p class="tous"><a href="/actualite/">Toutes les actualités</a></p>
+          <p class="tous"><a href="/actualite/"><:actualites_all:></a></p>
         </div><!-- #actualite -->
 
         <div id="articles">
@@ -53,7 +53,7 @@
             </BOUCLE_articles_recents>
           </dl>
 
-          <p class="tous"><a href="/articles/">Tous les articles</a></p>
+          <p class="tous"><a href="/articles/"><:articles_all_short:></a></p>
         </div><!-- #articles -->
       </div><!-- #texteaccueil -->
 
