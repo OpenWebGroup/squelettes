@@ -13,7 +13,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'auteur' => 'Auteur',
 	'auteurs' => 'Auteurs',
 	'auteur_le' => 'l\'auteur',
+	'better_displayed_in' => 'Ce site s\'affiche mieux dans un navigateur conforme aux standards',
+	'check_css_validity' => 'V&eacute;rifier la validit&eacute; de la feuille de styles',
+	'check_page_validity' => 'V&eacute;rifier la validit&eacute; de cette page',
 	'conditions_for_reuse' => 'Conditions de r&eacute;utilisation',
+	'contacts' => 'Contacts',
 	'for' => 'pour',
 	'forbidden_access' => 'Acc&egrave;s interdit',
 	'home' => 'Accueil',
@@ -21,15 +25,20 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'humeurs_all' => 'Tous les billets d\'humeur',
 	'le_date' => 'le',
 	'openweb_baseline' => 'Comprendre &amp; apprendre le Web ouvert',
+	'openweb_the_group' => 'Le collectif et ses membres',
 	'openweb_title' => 'OpenWeb, Comprendre &amp; apprendre le Web ouvert',
 	'page_not_found' => 'Page non trouv&eacute;e',
+	'privacy_policy' => 'Politique de confidentialit&eacute;',
 	'question_remark' => 'Une question, une remarque&nbsp;? Écrivez &agrave;',
 	'search' => 'rechercher',
 	'sitemap' => 'Plan du site',
 	'skip_to_menu' => 'Aller au menu',
 	'skip_to_text' => 'Aller au texte',
 	'space_before_colon' => '&nbsp;',
-	'update' => 'Mise &agrave; jour'
+	'submitting_contributions' => 'Proposer vos contributions',
+	'this_is_why'=> 'voici pourquoi',
+	'update' => 'Mise &agrave; jour',
+	'valid_page' => 'Page valide'
 
 ); // end array
 

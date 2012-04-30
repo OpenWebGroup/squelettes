@@ -13,6 +13,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'auteur' => 'Author',
 	'auteurs' => 'Authors',
 	'auteur_le' => 'the author',
+	'contacts' => 'Contacts',
+	'better_displayed_in' => 'This site is better displayed in a browser conforming to standards',
+	'check_css_validity' => 'Check the stylesheet\'s validity',
+	'check_page_validity' => 'Check this page\'s validity',
 	'conditions_for_reuse' => 'Conditions for reuse',
 	'for' => 'for',
 	'forbidden_access' => 'Forbidden access',
@@ -21,15 +25,20 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'humeurs_all' => 'All the opinions published on Openweb',
 	'le_date' => 'on',
 	'openweb_baseline' => 'Understanding and Learning the Open Web',
+	'openweb_the_group' => 'The Group and its members',
 	'openweb_title' => 'OpenWeb, Understanding and Learning the Open Web',
 	'page_not_found' => 'Page not found',
+	'privacy_policy' => 'Privacy policy',
 	'question_remark' => 'A question, a remark? Write to',
 	'search' => 'search',
 	'sitemap' => 'Sitemap',
 	'skip_to_menu' => 'Skip to the menu',
 	'skip_to_text' => 'Skip to the text',
 	'space_before_colon' => '',
-	'update' => 'Update'
+	'submitting_contributions' => 'Submitting your contributions',
+	'this_is_why'=> 'this is why',
+	'update' => 'Update',
+	'valid_page' => 'Valid page'
 
 ); // end array
 
