@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
   <head>
-    <title>Page non trouvée - [(#NOM_SITE_SPIP|textebrut)]</title>
+    <title><:page_not_found:> - [(#NOM_SITE_SPIP|textebrut)]</title>
     <INCLURE{fond=inc-head}>
   </head>
 
@@ -20,13 +20,20 @@
 		</div><!-- #bandeau -->
 
       <div id="texte">
-        <h2>Page non trouvée</h2>
-
+        <h2><:page_not_found:></h2>
+<multi>
+[fr]
         <p>Désolé, la page que vous cherchez n'existe pas ou plus.</p>
 
         <p>Si vous êtes arrivé sur cette page en suivant un lien, merci de nous
         indiquer lequel en écrivant à <a
           href="mailto:editorial%40openweb.eu.org">editorial@openweb.eu.org</a>.</p>
+[en]
+		<p>Sorry, the page you are looking for does not exist (or not anymore).</p>
+        <p>If you ended up here through a link, please report it to <a
+          href="mailto:editorial%40openweb.eu.org">editorial@openweb.eu.org</a>.</p>
+
+</multi>
       </div>
 
       [(#REM) Menu de navigation par rubriques ]

@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
   <head>
-    <title>Actualités - [(#NOM_SITE_SPIP|textebrut)]</title>
+    <title><:actualites:> - [(#NOM_SITE_SPIP|textebrut)]</title>
     <INCLURE{fond=inc-head}>
   </head>
 
@@ -16,11 +16,11 @@
 		</div><!-- #bandeau -->
 
       <div id="texte">
-        <h2>Actualités</h2>
+        <h2><:actualites:></h2>
         <B_breves>
         <dl class="listedocs">
           <BOUCLE_breves(BREVES) {par date}{inverse}>
-          <dt><cite>#TITRE</cite>[ le (#DATE|affdate{'d/m/Y'})].</dt>
+          <dt><cite>#TITRE</cite>[ <:le_date:> (#DATE|affdate{'d/m/Y'})].</dt>
           <dd>[(#TEXTE|coquette)]</dd>
           </BOUCLE_breves>
         </dl>
