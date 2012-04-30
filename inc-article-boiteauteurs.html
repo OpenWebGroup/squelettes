@@ -3,15 +3,15 @@
             <ul>
               <BOUCLE_groupes(GROUPES_MOTS){par titre}>
               <B_mots>
-              <li><strong>#TITRE</strong> :
+              <li><strong>#TITRE</strong><:space_before_colon:>:
               <BOUCLE_mots(MOTS){id_groupe}{id_article}{par titre}{", "}>#TITRE</BOUCLE_mots>
               </li>
               </B_mots>
               </BOUCLE_groupes>
               <BOUCLE_lesauteurs(AUTEURS){id_article}>
-              <li><strong>Auteur</strong> : <a href="#URL_AUTEUR">#NOM</a></li>
+              <li><strong><:auteur:></strong><:space_before_colon:>: <a href="#URL_AUTEUR">#NOM</a></li>
               </BOUCLE_lesauteurs>
-              <li class="dernier"><strong>Mise à jour</strong> : [(#DATE_MODIF|affdate{'d/m/Y'})]</li>
+              <li class="dernier"><strong><:update:></strong><:space_before_colon:>: [(#DATE_MODIF|affdate{'d/m/Y'})]</li>
             </ul>
           </div><!-- #auteur -->
 </BOUCLE_article>

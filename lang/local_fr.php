@@ -9,7 +9,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'articles_all' => 'Tous les articles d\'OpenWeb',
 	'articles_auteur' => 'Ses articles sur OpenWeb',
 	'articles_none' => 'Aucun article n\'a &eacute;t&eacute; publi&eacute; pour l\'instant.',
-	'auteur' => 'l\'auteur',
+	'auteur' => 'Auteur',
+	'auteur_le' => 'l\'auteur',
 	'forbidden_access' => 'Acc&egrave;s interdit',
 	'humeurs' => 'Humeurs',
 	'humeurs_all' => 'Tous les billets d\'humeur',
@@ -17,7 +18,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'page_not_found' => 'Page non trouv&eacute;e',
 	'question_remark' => 'Une question, une remarque&nbsp;? Écrivez &agrave;',
 	'skip_to_menu' => 'Aller au menu',
-	'skip_to_text' => 'Aller au texte'
+	'skip_to_text' => 'Aller au texte',
+	'space_before_colon' => '&nbsp;',
+	'update' => 'Mise &agrave; jour'
 
 ); // end array
 
