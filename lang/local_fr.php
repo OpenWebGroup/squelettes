@@ -11,6 +11,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'articles_all_short' => 'Tous les articles',
 	'articles_auteur' => 'Ses articles sur OpenWeb',
 	'articles_none' => 'Aucun article n\'a &eacute;t&eacute; publi&eacute; pour l\'instant.',
+	'articles_none_in_category' => 'Aucun article n\'a &eacute;t&eacute; publi&eacute; dans cette cat&eacute;gorie pour l\'instant.',
 	'auteur' => 'Auteur',
 	'auteurs' => 'Auteurs',
 	'auteur_le' => 'l\'auteur',
