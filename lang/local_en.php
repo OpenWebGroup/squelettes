@@ -6,6 +6,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'actualites' => 'News',
 	'articles' => 'Articles',
 	'articles_all' => 'All the articles on OpenWeb',
+	'articles_auteur' => 'His/her articles on OpenWeb',
 	'articles_none' => 'No article has been published so far.',
 	'auteur' => 'the author',
 	'forbidden_access' => 'Forbidden access',
