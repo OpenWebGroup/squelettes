@@ -38,7 +38,7 @@
           <h2><:dernieres_breves:></h2>
           <BOUCLE_breves(BREVES) {par date}{inverse} {0,3}>
           <h3>#TITRE</h3>
-          [<p class="date"><:le_date:> (#DATE|affdate{'d/m/Y'}).</p>]
+          [<p class="date"><:le_date:> (#DATE|affdate).</p>]
           [(#TEXTE|coquette)]
           </BOUCLE_breves>
           <p class="tous"><a href="/actualite/"><:actualites_all:></a></p>
