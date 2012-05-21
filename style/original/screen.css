@@ -213,7 +213,7 @@ cursor:pointer;
 #moteur{
 position:absolute;
 right:2em;
-top:1em;
+top:3.5em;
 text-align:right;
 }
 
@@ -240,7 +240,11 @@ border:0;
 }
 
 h1{
-margin: 1.5em 0 0 1.5em;
+margin: 1em 0 0 1.5em;
+}
+
+#logo p{
+margin: -1em 0 0 4em;
 }
 
 /*#menus{
