@@ -316,7 +316,7 @@ text-decoration: underline;
 /* --------------- */
 
 #ours{
-background: #efede7;
+background: #efede7 url(ours.png) repeat-x 50% 0;
 clear:both;
 padding: 1em 3em;
 }
