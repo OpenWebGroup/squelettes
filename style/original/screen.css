@@ -107,7 +107,6 @@ padding:0.2em;
 
 h1, h2, h3, h4, h5, h6{
 font-weight: 500;
-margin: 0;
 }
 
 input,
@@ -238,7 +237,6 @@ float:left;
 
 #logo img{
 border:0;
-visibility: hidden;
 }
 
 h1{
@@ -658,6 +656,10 @@ background-color:transparent;
 #texte h3 {
 font: 700 1.5em/normal calibri, arial, sans-serif;
 margin: 2em 0 .5em;
+}
+
+#texte div.formulaire_spip + h3{
+color: #db2976;
 }
 
 #texte h4{
