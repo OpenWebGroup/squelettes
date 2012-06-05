@@ -9,7 +9,7 @@
 	<div id="nav">
 		<h2 class="hideme">Navigation</h2>
 		<ul>
-			<BOUCLE_rub1(RUBRIQUES){id_rubrique in 1,8,9,4}>
+			<BOUCLE_rub1(RUBRIQUES){id_rubrique IN 1,8,9,4}>
 			[(#ENV{id_rubrique}|=={#ID_RUBRIQUE}|oui)
 			<li><strong>#TITRE</strong></li>
 			][(#ENV{id_rubrique}|=={#ID_RUBRIQUE}|non)

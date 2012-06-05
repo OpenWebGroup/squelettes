@@ -17,7 +17,7 @@
 </div><!-- /#une -->
 
 <div id="unesecondaire">
-	<BOUCLE_unesecondaire(RUBRIQUES){id_rubrique in 8,9}>
+	<BOUCLE_unesecondaire(RUBRIQUES){id_rubrique IN 8,9}>
 	<h1 class="rub#ID_RUBRIQUE">#TITRE</h1>
 	<BOUCLE_sub(ARTICLES){id_rubrique}{0,5}{!par date}>
 	<INCLURE{fond=inc/article_liste,env}{id_article}>
@@ -27,7 +27,7 @@
 	<h2><:sur_les_blogs:></h2>
 	<ul>
 		<BOUCLE_syndic(SYNDIC_ARTICLES) {age<180}{par date}{inverse}{0,10}>
-		<li><a href="#URL_ARTICLE">[(#TITRE|entites_html)]</a>[ <:sur:> (#NOM_SITE)] </li>
+		<li><a href="#URL_ARTICLE">[(#TITRE)]</a>[ <:sur:> (#NOM_SITE)] </li>
 		</BOUCLE_syndic>
 	</ul>
 
