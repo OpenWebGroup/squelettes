@@ -1,3 +1,6 @@
+#HTTP_HEADER{#VAL{"HTTP/1.0 "}|concat{#ENV{code,"403 Forbidden"}}}
+#HTTP_HEADER{"Cache-Control: no-store, no-cache, must-revalidate"}
+#HTTP_HEADER{Pragma: no-cache}
 <!doctype html>
 <html lang="#LANG" class="article">
 <head>
@@ -12,20 +15,14 @@
 <div id="article">
 <h1><:erreur403:></h1>
 
-<div class="chapo">
+<div class="texte">
 <p>Vous tentez d'accéder à une partie interdite. Si vous trouvez ça trop injuste,
-expliquez-nous le problème grâce au formulaire ci-dessous.</p>
+expliquez-nous le problème via le <a href="/openwebgroup/bios/collectif">formulaire de contact</a>.</p>
 <p lang="en">You are trying to enter a forbidden zone. If it seems unfair,
-please tell us about the problem through the form below.</p>
+please tell us about the problem through the <a href="/openwebgroup/bios/collectif">contact form</a>.</p>
 </multi>
 </div>
 
-[(#REM) 39 c'est l'auteur "collectif"]
-<BOUCLE_contact(AUTEURS){tout}{id_auteur=39}>
-<div class="texte">
-#FORMULAIRE_ECRIRE_AUTEUR
-</div>
-</BOUCLE_contact>
 
 
 

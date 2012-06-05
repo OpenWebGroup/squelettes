@@ -1,3 +1,6 @@
+#HTTP_HEADER{#VAL{"HTTP/1.0 "}|concat{#ENV{code,"404 Not Found"}}}
+#HTTP_HEADER{"Cache-Control: no-store, no-cache, must-revalidate"}
+#HTTP_HEADER{Pragma: no-cache}
 <!doctype html>
 <html lang="#LANG" class="article">
 <head>
@@ -12,20 +15,14 @@
 <div id="article">
 <h1><:erreur404:></h1>
 
-<div class="chapo">
+<div class="texte">
 <p>Vous cherchez une page qui n'existe pas. Si vous pensez qu'il y a une erreur,
-merci de nous le faire savoir grâce au formulaire ci-dessous.</p>
+merci de nous le faire savoir via le <a href="/openwebgroup/bios/collectif">formulaire de contact</a>.</p>
 <p lang="en">You are looking for a page that does not exist. If you think this is a mistake,
-please let us know through the form below.</p>
+please let us know through the <a href="/openwebgroup/bios/collectif">contact form</a>.</p>
 </multi>
 </div>
 
-[(#REM) 39 c'est l'auteur "collectif"]
-<BOUCLE_contact(AUTEURS){tout}{id_auteur=39}>
-<div class="texte">
-#FORMULAIRE_ECRIRE_AUTEUR
-</div>
-</BOUCLE_contact>
 
 
 
