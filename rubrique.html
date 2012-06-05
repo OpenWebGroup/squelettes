@@ -1,39 +1,45 @@
-#CACHE{86400}
-<BOUCLE_rubrique_principal(RUBRIQUES) {id_rubrique}>
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
-  <head>
-    <title>[(#TITRE|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
-    <INCLURE{fond=inc-head}>
-  </head>
+<BOUCLE_principale(RUBRIQUES){id_rubrique}>
+<!doctype html>
+<html lang="#LANG">
+<head>
+<INCLURE{fond=inc/head,env}>
+<title>[(#TITRE|textebrut)] | #NOM_SITE_SPIP</title>
 
-  <body>
-    <div id="page">
+</head>
+<body>
+<INCLURE{fond=inc/body_prepend,env}{id_rubrique}>
 
-		<div id="bandeau">
-			<INCLURE{fond=inc-accessible-sommaire}>
-			<INCLURE{fond=inc-moteur}>
-			<INCLURE{fond=inc-entete}>
-		</div><!-- #bandeau -->
 
-      <div id="texte">
-        <h2>#TITRE</h2>
-        <B_articles>
-        <dl class="listedocs">
-          <BOUCLE_articles(ARTICLES){id_rubrique}{par date}{inverse}>
-          <INCLURE{fond=inc-articlecourt}{id_article}>
-          </BOUCLE_articles>
-        </dl>
-        </B_articles>
-      </div>
+<div id="une">
+<h1>#TITRE</h1>
+<div class="chemindefer">
+<p><a href="#URL_SITE_SPIP">#NOM_SITE_SPIP</a>&nbsp;&gt; <BOUCLE_hier(HIERARCHIE){id_rubrique}{"&nbsp;&gt; "}><a href="#URL_RUBRIQUE">#TITRE</a></BOUCLE_hier>&nbsp;&gt; </B_hier>#TITRE</p>
+</div>
 
-      [(#REM) Menu de navigation par rubriques ]
-      <INCLURE{fond=inc-rubriques}>
+<B_une>
+[<p class="pagine">[(#ANCRE_PAGINATION)](#PAGINATION)</p>]
+<BOUCLE_une(ARTICLES){id_rubrique}{!par date}{pagination 10}>
+<INCLURE{fond=inc/article_liste,env}{id_article}>
+</BOUCLE_une>
+[<p class="pagine">(#PAGINATION)</p>]
+</B_une>
+</div><!-- /#une -->
 
-      [(#REM) Pied de page ]
-      <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
+<div id="unesecondaire">
+[(#DESCRIPTIF|paragrapher)]
+[(#TEXTE|paragrapher)]
 
-    </div>
-  </body>
+<B_sites>
+<h2><:sites_amis:></h2>
+<ul>
+<BOUCLE_sites(SITES) {id_rubrique} {par nom_site}>
+<li><a href="[(#URL_SITE)]">#NOM_SITE</a></li>
+</BOUCLE_sites>
+</ul>
+</B_sites>
+</div><!-- /#unesecondaire -->
+
+<INCLURE{fond=inc/body_append,env}>
+</body>
 </html>
-</BOUCLE_rubrique_principal>
+</BOUCLE_principale>

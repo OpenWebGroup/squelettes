@@ -1,47 +1,38 @@
-#HTTP_HEADER{#VAL{"HTTP/1.0 "}|concat{#ENV{code,"404 Not Found"}}}
-#HTTP_HEADER{"Cache-Control: no-store, no-cache, must-revalidate"}
-#HTTP_HEADER{Pragma: no-cache}
-#CACHE{24 * 3600}
+<!doctype html>
+<html lang="#LANG" class="article">
+<head>
+<INCLURE{fond=inc/head,env}>
+<title><:erreur404:> | #NOM_SITE_SPIP</title>
 
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
-  <head>
-    <title><:page_not_found:> - [(#NOM_SITE_SPIP|textebrut)]</title>
-    <INCLURE{fond=inc-head}>
-  </head>
+</head>
+<body>
+<INCLURE{fond=inc/body_prepend,env}{contexte=pasdeboussole}>
 
-  <body>
-    <div id="page">
 
-		<div id="bandeau">
-			<INCLURE{fond=inc-accessible-sommaire}>
-			<INCLURE{fond=inc-moteur}>
-			<INCLURE{fond=inc-entete}>
-		</div><!-- #bandeau -->
+<div id="article">
+<h1><:erreur404:></h1>
 
-      <div id="texte">
-        <h2><:page_not_found:></h2>
-<multi>
-[fr]
-        <p>Désolé, la page que vous cherchez n'existe pas ou plus.</p>
-
-        <p>Si vous êtes arrivé sur cette page en suivant un lien, merci de nous
-        indiquer lequel en écrivant à <a
-          href="mailto:editorial%40openweb.eu.org">editorial@openweb.eu.org</a>.</p>
-[en]
-		<p>Sorry, the page you are looking for does not exist (or not anymore).</p>
-        <p>If you ended up here through a link, please report it to <a
-          href="mailto:editorial%40openweb.eu.org">editorial@openweb.eu.org</a>.</p>
-
+<div class="chapo">
+<p>Vous cherchez une page qui n'existe pas. Si vous pensez qu'il y a une erreur,
+merci de nous le faire savoir grâce au formulaire ci-dessous.</p>
+<p lang="en">You are looking for a page that does not exist. If you think this is a mistake,
+please let us know through the form below.</p>
 </multi>
-      </div>
+</div>
 
-      [(#REM) Menu de navigation par rubriques ]
-      <INCLURE{fond=inc-rubriques}>
+[(#REM) 39 c'est l'auteur "collectif"]
+<BOUCLE_contact(AUTEURS){tout}{id_auteur=39}>
+<div class="texte">
+#FORMULAIRE_ECRIRE_AUTEUR
+</div>
+</BOUCLE_contact>
 
-      [(#REM) Pied de page ]
-      <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
 
-    </div>
-  </body>
+
+</div><!-- /#article -->
+
+
+
+<INCLURE{fond=inc/body_append,env}>
+</body>
 </html>

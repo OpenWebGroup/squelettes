@@ -1,0 +1,86 @@
+/* couleurs
+orange logo #FDA847
+grenat #99194C
+bleu-gris liens #00667F
+*/
+
+/* reset vite fait */
+body, h1, h2, h3, h4, h5, h6 { padding:0; margin:0; }
+
+body { font-family: Arial, Helvetica,sans-serif; color:#333; background:#fff; }
+
+a:link { color:#00667F; text-decoration:underline; }
+a:visited { color:#666; }
+a:link img, a:visited img{ border-style:none; }
+h2 a:link, h2 a:visited { text-decoration:none; }
+h2 a:hover, h2 a:focus, h2 a:active { text-decoration:underline; }
+
+h1, .h1 { font-size:200%; font-weight:bold; }
+h2, .h2 { font-size:150%; font-weight:bold; }
+h3, .h3 { font-size:100%; font-weight:bold; text-transform:uppercase; color:#99194C; }
+.hneutre { font-size:100%; }
+
+code, pre { color:#00a; }
+pre, .spip_documents { display:block; overflow:auto; background:#f6f6f6; width:auto !important; float:none !important; }
+
+.hideme { /* http://yaccessibilityblog.com/library/css-clip-hidden-content.html */
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+
+#nodesign { background:#666; color:#fff; padding:.3em; }
+
+#container { margin:1em auto; width:80%; min-width:750px; }
+#logo { float:left; position:relative; width:241px; }
+#logo .baseline { position:absolute; left:30px; top:70px; font-size:70%; text-transform:lowercase; letter-spacing:.04em; }
+#logo a:link, #logo a:visited, #logo .baseline { text-decoration:none; color:#99194C; }
+#nav { float:right; font-size:150%; margin-top:20px; }
+#nav ul, #footer ul { list-style:none; margin:0; padding:0; }
+#nav li, #footer li { display:inline; }
+#nav ul a:link, #nav ul a:visited, #nav ul strong, #footer ul a:link, #footer ul a:visited { display:inline-block; padding:.3em; }
+#nav ul strong { font-weight:normal; color:#FDA847; }
+#footer { font-size:75%; color:#444; clear:both; border-top: 1px solid #FDA847; }
+
+#content { clear:both; padding-top:1em; padding-bottom:1em; border-top: 1px solid #FDA847;  }
+#boussole { float:left; width:18%; font-size:75%; margin-top:4em; }
+#boussole ul { list-style:none; padding:0; margin:0 0 .5em 0; }
+#boussole li { display:inline; }
+#boussole a:link, #boussole a:visited { display:block; text-decoration:none; padding:.2em; }
+#boussole a:hover, #boussole a:active, #boussole a:focus { color:#000; background-color:#D6E0EB; }
+#boussole strong:after { content: " »"; }
+
+#recherche { width:80%; }
+#lancerecherche { width:18px; border:none; padding:0; margin:0; background:#fff;}
+#recherche, #lancerecherche { display:table-cell; vertical-align: bottom;}
+#lancerecherche img { display:block; }
+
+#une, #article { float:left; width:50%; margin-left:2%; padding-bottom:1em; }
+#une .chapo { margin-bottom:1em; }
+#unesecondaire, #about { float:right; width:28%; }
+#unesecondaire h1.rub9 { margin-top:1em; }
+
+.article .chapo { font-weight:bold; color:#666; border-bottom:1px solid #FDA847; line-height:1.5; }
+.texte { line-height: 1.5; margin-top:1em; }
+.notes { border-top:1px solid #FDA847; }
+#about ul { list-style:none; margin:1em 0; padding:0; font-size:75%; }
+#about li { margin:0 0 1em 0; padding:0; }
+.logo_auteur { float:right; margin-left:20px; margin-bottom:10px; padding:2px; background:#fff; border:1px solid #ccc; }
+p[lang] { font-style:italic; }
+
+#forum { clear:both; border-top: 1px solid #FDA847; }
+#forum h2 { margin-top:1em; margin-left:20%; }
+.forum-total, .forum-meta { list-style:none; padding:0; margin:0; }
+li.forum { margin-top:1em; clear:left; }
+#forum h3 { text-transform: inherit; display:block; }
+.forum-titre { float: left; width:18%; margin-top:1em; }
+.forum-texte { margin-left:20%; border-top: 1px solid #ccc; margin-top:1em; }
+.forum-repondre { text-align:right;  }
+#forum-suite { margin-left:20%; border-top: 1px solid #ccc; margin-top:1em; clear:both; }
+

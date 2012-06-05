@@ -1,65 +1,99 @@
-#CACHE{86400}
-<BOUCLE_article_principal(ARTICLES) {id_article}>
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
-  <head profile="http://dublincore.org/documents/2008/08/04/dc-html/">
-    <title>[(#TITRE|textebrut|supprimer_numero) - ][(#NOM_SITE_SPIP|textebrut)]</title>
-    <INCLURE{fond=inc-head}>
-    <INCLURE{fond=inc-dublincore}{id_article}>
-  </head>
+<BOUCLE_principale(ARTICLES){id_article}>
+<!doctype html>
+<html lang="#LANG" class="article">
+<head>
+<INCLURE{fond=inc/head,env}>
+<title>[(#TITRE|textebrut)] | #NOM_SITE_SPIP</title>
 
-  <body>
-    <div id="page">
+</head>
+<body>
+<INCLURE{fond=inc/body_prepend,env}{id_article}>
 
-		<div id="bandeau">
-			<INCLURE{fond=inc-accessible-sommaire}>
-			<INCLURE{fond=inc-moteur}>
-			<INCLURE{fond=inc-entete}>
-		</div><!-- #bandeau -->
 
-      <div id="texte">
-        <h2>[(#TITRE|supprimer_numero)]</h2>
-        [(#CHAPO|?{' ',''})
-        <INCLURE{fond=inc-article-boiteauteurs} {id_article}>
-        <div class="abstract">
-          <h3><:abstract:></h3>
-          [(#CHAPO|coquette)]
-          <hr />
-        </div>
-        ]
-         [(#CHAPO|?{'',' '})
-       <INCLURE{fond=inc-article-boiteauteurs} {id_article}>
-        ]   
+<div id="article">
+<h1>#TITRE</h1>
 
-        [(#TEXTE|coquette)]
+<div class="chemindefer">
+<p><a href="#URL_SITE_SPIP">#NOM_SITE_SPIP</a>&nbsp;&gt; <BOUCLE_hier(HIERARCHIE){id_article}{"&nbsp;&gt; "}><a href="#URL_RUBRIQUE">#TITRE</a></BOUCLE_hier>&nbsp;&gt; </B_hier>#TITRE</p>
+</div>
+<h2 class="hideme">Abstract</h2>
+<div class="chapo">#CHAPO</div>
 
-        [(#NOTES)]
+<h2 class="hideme">Article</h2>
+<div class="texte">#TEXTE</div>
 
-        <hr />
-        <p class="reaction">
-	<:question_remark:>
-	<B_reaction>
-	<BOUCLE_reaction(AUTEURS){id_article}{0,1}>
-	[(#EMAIL|?{<a href="#URL_AUTEUR"><:auteur_le:></a>,
-	<a href="mailto:editorial%40openweb.eu.org">editorial@openweb.eu.org</a>})].
-	</BOUCLE_reaction>
-	</B_reaction>
-	<a href="mailto:editorial%40openweb.eu.org">editorial@openweb.eu.org</a>.
-	<//B_reaction>
-	</p>
-	[(#REM) Forum de l'article ]
-		<a href="#forum" name="forum" id="forum"></a>
-		<INCLURE{fond=inc-forum}{id_article} />
-		[<p class="repondre"><a href="(#PARAMETRES_FORUM|url_reponse_forum)" rel="noindex nofollow"><:repondre_article:></a></p>] 
-      </div>
+[<h3>Notes</h3>
+<div class="notes"(#NOTES)</div>]
 
-      [(#REM) Menu de navigation par rubriques ]
-      <INCLURE{fond=inc-rubriques}>
+</div><!-- /#article -->
 
-      [(#REM) Pied de page ]
-      <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
+<div id="about">
+<h2 class="hneutre">À propos de cet article</h2>
+<ul>
+	<BOUCLE_groupes(GROUPES_MOTS){par titre}>
+	<B_mots>
+	<li><strong>#TITRE</strong>&nbsp;:
+	<BOUCLE_mots(MOTS){id_groupe}{id_article}{par titre}{", "}>#TITRE</BOUCLE_mots>
+	</li>
+	</B_mots>
+	</BOUCLE_groupes>
+	<B_lesauteurs>
+	<li><strong>Auteur[(#_lesauteurs:TOTAL_BOUCLE|>={2}|?{'s',''})]</strong>&nbsp;:
+	<BOUCLE_lesauteurs(AUTEURS){id_article}{", "}><a href="#URL_AUTEUR">#NOM</a></BOUCLE_lesauteurs>
+	</li>
+	</B_lesauteurs>
+	<li><strong>Publié le</strong>&nbsp;: [(#DATE|affdate)]</li>
+	[<li><strong>Mise &agrave; jour</strong>&nbsp;: (#DATE_MODIF|affdate)</li>]
+	<B_compteforums><li><a href="#forum">#_compteforums:TOTAL_BOUCLE commentaire[(#_compteforums:TOTAL_BOUCLE|>={2}|?{'s',''})]</a></li>
+	<BOUCLE_compteforums(FORUMS){plat}{id_article}> </BOUCLE_compteforums>
+</ul>
+</div><!-- /#about -->
 
-    </div><!-- #page -->
-  </body>
+<div id="forum">
+<h2>Commentaires</h2>
+
+[(#REM) Cette balise (invisible) provoque le recalcul du forum
+la premiere fois qu'un message est poste (cf. inc/invalideur). ]
+[(#PARAMETRES_FORUM|?{''})]
+
+<B_forums>
+<ul class="forum-total">
+<BOUCLE_forums(FORUMS){plat}{id_article}{par date}>
+
+<li class="forum forum#ID_AUTEUR">
+
+<div class="forum-titre">
+<h3><a name="forum#ID_FORUM" href="#forum#ID_FORUM" class="forum-lien">[(#NOM|?{#NOM,<:anonyme:>})]</a></h3>
+
+<ul class="forum-meta">
+	<li>[(#DATE|affdate)]</li>
+    <BOUCLE_forumparent(FORUMS){id_enfant}><li><:en_reponse_a:>
+    <a href="#forum#ID_FORUM" class="forum-lien">[(#NOM|?{#NOM,<:anonyme:>})]</a></li>
+    </BOUCLE_forumparent>
+</ul>
+</div>
+
+<div class="forum-texte">
+[(#TEXTE|paragrapher|nofollow)]
+[<p><a href="(#URL_SITE)" class="spip_out" rel="nofollow">#NOM_SITE</a></p>]
+[<p class="forum-repondre"><a href="#URL_SITE_SPIP?page=forum&amp;(#PARAMETRES_FORUM)" data-id-forum="#ID_FORUM" class="forum-lien"><:repondre_a:> [(#NOM|?{#NOM,<:anonyme:>})]</a></p>]
+</div>
+
+</li><!-- /class forum forum#ID_AUTEUR -->
+</BOUCLE_forums>
+</ul>
+
+</B_forums>
+
+[(#REM) pour pas faire trop moche si pas de commentaires]
+[(#PARAMETRES_FORUM|non)
+<div id="forum-suite"><p><:no_comment:></p></div>]
+
+[<div id="forum-suite"><p><a href="#URL_SITE_SPIP?page=forum&amp;(#PARAMETRES_FORUM)" class="forum-lien"><:commenter:></a></p></div>]
+
+</div><!-- /#forum -->
+
+<INCLURE{fond=inc/body_append,env}>
+</body>
 </html>
-</BOUCLE_article_principal>
+</BOUCLE_principale>
