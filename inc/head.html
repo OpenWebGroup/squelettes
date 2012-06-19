@@ -1,5 +1,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=#CHARSET" />
-[<link rel="stylesheet" href="(#CHEMIN{nodesign.css})" media="all" />]
+[<link rel="stylesheet" type="text/css" href="(#CHEMIN{nodesign.css})" media="all" />]
 <link rel="alternate" type="application/rss+xml" title="Syndiquer tout le site" href="#URL_SITE_SPIP/?page=backend" />
+<link rel="alternate" type="application/rss+xml" title="Syndiquer les commentaires" href="#URL_SITE_SPIP/?page=rss2_comments" />
 [<link rel="icon" href="(#CHEMIN{favicon.ico})" />]
 [<link rel="shortcut icon" type="images/x-icon" href="(#CHEMIN{favicon.ico})" />]
+<BOUCLE_desc(ARTICLES){id_article}>
+[<meta name="description" content="(#INTRODUCTION{150}|attribut_html)" />]
+</BOUCLE_desc>
+
+<!-- Fugue icons by http://p.yusukekamiyamane.com/ -->

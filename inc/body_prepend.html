@@ -1,13 +1,22 @@
+<div id="nodesign">
+[<img src="(#CHEMIN{img/exclamation.png})" alt="Nota bene" width="16" height="16">]
+<multi>
+[fr]
+Openweb est en pleine mue, veuillez nous excuser pour cette présentation sommaire.
+[en]
+Openweb is undergoing major changes, please accept our apologies for this sparse design.
+</multi>
+</div>
 <div id="container">
 <div id="header">
 	<h1 id="logo">
 	[(#ENV{contexte}|=={sommaire}|oui)
-	[(#LOGO_SITE_SPIP||inserer_attribut{alt,#NOM_SITE_SPIP})] [<span class="baseline">(#SLOGAN_SITE_SPIP)</span>]
+	[(#LOGO_SITE_SPIP||inserer_attribut{alt,#NOM_SITE_SPIP})] [<span class="baseline" lang="fr">(#SLOGAN_SITE_SPIP)</span>]
 	][(#ENV{contexte}|=={sommaire}|non)
-	<a href="#URL_SITE_SPIP">[(#LOGO_SITE_SPIP||inserer_attribut{alt,#NOM_SITE_SPIP - <:back_to_home:>})] [<span class="baseline">(#SLOGAN_SITE_SPIP)</span>]</a>]</h1>
+	<a href="#URL_SITE_SPIP">[(#LOGO_SITE_SPIP||inserer_attribut{alt,#NOM_SITE_SPIP - <:back_to_home:>})] [<span class="baseline" lang="fr">(#SLOGAN_SITE_SPIP)</span>]</a>]</h1>
 	
 	<div id="nav">
-		<h2 class="hideme">Navigation</h2>
+		<h2 class="hideme"><:navigation:></h2>
 		<ul>
 			<BOUCLE_rub1(RUBRIQUES){id_rubrique IN 1,8,9,4}>
 			[(#ENV{id_rubrique}|=={#ID_RUBRIQUE}|oui)

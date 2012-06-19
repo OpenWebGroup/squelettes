@@ -13,21 +13,21 @@
 
 <h1><:plan_du_site:></h1>
 	  <BOUCLE_owGroup(RUBRIQUES){id_rubrique=3}>
-	  <h2>[(#TITRE|supprimer_numero)]</h2>
+	  <h2 lang="#LANG">[(#TITRE|supprimer_numero)]</h2>
 		<ul>
 		<BOUCLE_owGroupArticles(ARTICLES){id_rubrique}{par titre}>
-			<li><a href="#URL_ARTICLE">[(#TITRE|supprimer_numero)]</a></li>
+			<li lang="#LANG"><a href="#URL_ARTICLE">[(#TITRE|supprimer_numero)]</a></li>
 		</BOUCLE_owGroupArticles>
 		</ul>
 	  </BOUCLE_owGroup>
 	  
-	  <h2>Entrées dans le site</h2>
+	  <h2><:entrees_dans_le_site:></h2>
 	  
 	  <BOUCLE_entreeProfil(GROUPES_MOTS){id_groupe=3}>
 	  <h3>#TITRE</h3>
 	  <ul>
 		<BOUCLE_entreeProfilsub(MOTS){id_groupe=3}{par titre}>
-		<li><a href="#URL_MOT">#TITRE</a></li>
+		<li lang="#LANG"><a href="#URL_MOT">#TITRE</a></li>
 		</BOUCLE_entreeProfilsub>
 	  </ul>
 	  </BOUCLE_entreeProfil>
@@ -36,7 +36,7 @@
 	  <h3>#TITRE</h3>
 	  <ul>
 		<BOUCLE_entreeThemesub(MOTS){id_groupe=2}{par titre}>
-		<li><a href="#URL_MOT">#TITRE</a></li>
+		<li lang="#LANG"><a href="#URL_MOT">#TITRE</a></li>
 		</BOUCLE_entreeThemesub>
 	  </ul>
 	  </BOUCLE_entreeTheme>
@@ -45,7 +45,7 @@
 	  <h3>#TITRE</h3>
 	  <ul>
 		<BOUCLE_entreeTechnosub(MOTS){id_groupe=1}{par titre}>
-		<li><a href="#URL_MOT">#TITRE</a></li>
+		<li lang="#LANG"><a href="#URL_MOT">#TITRE</a></li>
 		</BOUCLE_entreeTechnosub>
 	  </ul>
 	  </BOUCLE_entreeTechno>
@@ -54,12 +54,12 @@
 	  <h2>[(#TITRE|supprimer_numero)]</h2>
 		<ul>
 		<BOUCLE_articlesArticles(ARTICLES){id_rubrique}{par date}{inverse}>
-			<li><a href="#URL_ARTICLE">[(#TITRE|supprimer_numero)]</a>[ ((#DATE|affdate))]</li>
+			<li lang="#LANG"><a href="#URL_ARTICLE">[(#TITRE|supprimer_numero)]</a>[ ((#DATE|affdate))]</li>
 		</BOUCLE_articlesArticles>
 		</ul>
 	  </BOUCLE_articles>
 	  
-	  <h2>Les membres d'OpenWebGroup</h2>
+	  <h2><:membres:></h2>
 	  
 	  <ul>
 	  <BOUCLE_auteurs(AUTEURS){par nom}{tout}>

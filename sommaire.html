@@ -10,8 +10,8 @@
 
 
 <div id="une">
-	<h1>Articles à la une</h1>
-	<BOUCLE_une(ARTICLES){id_rubrique=1}{0,5}{!par date}>
+	<h1><:a_la_une:></h1>
+	<BOUCLE_une(ARTICLES){id_rubrique=1}{0,5}{!par date}{lang ?}>
 	<INCLURE{fond=inc/article_liste,env}{id_article}>
 	</BOUCLE_une>
 </div><!-- /#une -->
@@ -19,7 +19,7 @@
 <div id="unesecondaire">
 	<BOUCLE_unesecondaire(RUBRIQUES){id_rubrique IN 8,9}>
 	<h1 class="rub#ID_RUBRIQUE">#TITRE</h1>
-	<BOUCLE_sub(ARTICLES){id_rubrique}{0,5}{!par date}>
+	<BOUCLE_sub(ARTICLES){id_rubrique}{0,5}{!par date}{lang ?}>
 	<INCLURE{fond=inc/article_liste,env}{id_article}>
 	</BOUCLE_sub>
 	</BOUCLE_unesecondaire>

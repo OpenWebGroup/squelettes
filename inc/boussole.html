@@ -1,10 +1,17 @@
-<h2 class="hideme">Repères</h2>
+<h2 class="hideme"><:reperes:></h2>
+<p class="langswitcher">
+[(#ENV{lang}|=={fr}|oui)
+<a href="#URL_SITE_SPIP/?lang=en" lang="en" hreflang="en">See this site in English</a>
+]
+[(#ENV{lang}|=={fr}|non)
+<a href="#URL_SITE_SPIP/?lang=fr" lang="fr" hreflang="fr">Voir ce site en français</a>
+]
+</p>
 <div role="search">
 <form action="/recherche/" method="get">
 <h3><:recherche:></h3>
 <input type="search" name="recherche" id="recherche"[ value="(#RECHERCHE)"]>
 <button id="lancerecherche" title="<:lancer_la_recherche:>"><img src="[(#CHEMIN{img/magnifier-zoom.png})]" alt="<:lancer_la_recherche:>" width="16" height="16"></button>
-<!-- Fugue icon by http://p.yusukekamiyamane.com/ -->
 </form>
 </div><!-- /role=search -->
 <BOUCLE_groupes(GROUPES_MOTS){par titre}>
