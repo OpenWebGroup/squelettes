@@ -1,0 +1,16 @@
+<BOUCLE_comment(FORUMS){id_forum}>
+<p class="comment-meta">
+	[(#CONFIG{comments/permalink}|=={aucun}|non)<a rel="self bookmark" href="#forum#ID_FORUM" title="<:comments:permalink_to:> #ID_FORUM" class="permalink #CONFIG{comments/permalink}">[(#CONFIG{comments/permalink}|=={picto}|?{[<img src="(#CHEMIN{img/permalink.gif})" alt="#" />],[(#CONFIG{comments/permalink}|=={compteur}|?{[(#ENV{compteur})<span class="sep">.</span>],#})]})]</a>
+	[(#ENV{thread}|oui)[<a rel="in-reply-to" class="permalink in-reply-to" href="#forum(#ID_PARENT|?{#ID_PARENT})">^</a>]]
+	]<BOUCLE_auteur(AUTEURS){tout}{id_auteur}>
+	[<span class="reviewer vcard"><a rel="nofollow" href="#URL_AUTEUR" class="url spip_in"><strong class="fn n">(#NOM)</strong></a>[(#PLUGIN{gravatar}|oui)[ (#MODELE{gravatar})]]</span>]
+	[<abbr class="dtreviewed"[ title="(#DATE|date_iso)"]><:comments:date_jour_le:> (#DATE|affdate_jourcourt)[ <:comments:date_heure_a:>&nbsp;(#DATE|heures)][:(#DATE|minutes)]</abbr>]
+	</BOUCLE_auteur>
+	[<span class="reviewer vcard">[<a rel="external nofollow" href="(#URL_SITE)"[ title="(#NOM_SITE*|attribut_html)"] class="#EDIT{hyperlien} url spip_out">]<strong class="#EDIT{qui} fn n">(#NOM|sinon{[(#PLUGIN{gravatar}|oui)<:anonyme:>]})</strong>[</a>(#URL_SITE|oui)][(#PLUGIN{gravatar}|oui)[ (#MODELE{gravatar}{email=#EMAIL*})]]</span>]
+	[<abbr class="dtreviewed"[ title="(#DATE|date_iso)"]><:comments:date_jour_le:> (#DATE|affdate_jourcourt)[ <:comments:date_heure_a:>&nbsp;(#DATE|heures)][:(#DATE|minutes)]</abbr>]
+	<//B_auteur>
+	<BOUCLE_forumparent(FORUMS){id_enfant}>
+	<span class="item"><:en_reponse:> <a class="url fn" href="#comment#ID_FORUM">[(#NOM|?{#NOM,<:anonyme:>})]</a></span>
+	</BOUCLE_forumparent>
+</p>
+</BOUCLE_comment> 

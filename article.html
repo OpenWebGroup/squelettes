@@ -52,49 +52,7 @@
 </ul>
 </div><!-- /#about -->
 
-<div id="forum">
-<h2><:commentaires_majuscule:></h2>
-
-[(#REM) Cette balise (invisible) provoque le recalcul du forum
-la premiere fois qu'un message est poste (cf. inc/invalideur). ]
-[(#PARAMETRES_FORUM|?{''})]
-
-<B_forums>
-<ul class="forum-total">
-<BOUCLE_forums(FORUMS){plat}{id_article}{par date}>
-
-<li class="forum forum#ID_AUTEUR">
-
-<div class="forum-titre">
-<h3><a name="comment#ID_FORUM" id="forum#ID_FORUM" href="#forum#ID_FORUM" class="forum-lien">[(#NOM|?{#NOM,<:anonyme:>})]</a></h3>
-
-<ul class="forum-meta">
-	<li>[(#DATE|affdate)]</li>
-    <BOUCLE_forumparent(FORUMS){id_enfant}><li><:en_reponse_a:>
-    <a href="#forum#ID_FORUM" class="forum-lien">[(#NOM|?{#NOM,<:anonyme:>})]</a></li>
-    </BOUCLE_forumparent>
-</ul>
-</div>
-
-<div class="forum-texte">
-[(#TEXTE|paragrapher|nofollow)]
-[<p><a href="(#URL_SITE)" class="spip_out" rel="nofollow">#NOM_SITE</a></p>]
-[<p class="forum-repondre"><a href="#URL_SITE_SPIP?page=forum&amp;(#PARAMETRES_FORUM)" data-id-forum="#ID_FORUM" class="forum-lien"><:repondre_a:> [(#NOM|?{#NOM,<:anonyme:>})]</a></p>]
-</div>
-
-</li><!-- /class forum forum#ID_AUTEUR -->
-</BOUCLE_forums>
-</ul>
-
-</B_forums>
-
-[(#REM) pour pas faire trop moche si pas de commentaires]
-[(#PARAMETRES_FORUM|non)
-<div id="forum-suite"><p><:no_comment:></p></div>]
-
-[<div id="forum-suite"><p><a href="#URL_SITE_SPIP?page=forum&amp;(#PARAMETRES_FORUM)" class="forum-lien"><:commenter:></a></p></div>]
-
-</div><!-- /#forum -->
+<INCLURE{fond=comments,id_article,id_rubrique='',env} />
 
 <INCLURE{fond=inc/body_append,env}>
 </body>

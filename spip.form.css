@@ -1,0 +1,97 @@
+/*  ------------------------------------------
+/*  Habillage des formulaires SPIP
+/*  ------------------------------------------ */
+
+input, textarea, select {-webkit-box-sizing: border-box;-ms-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.bugajaxie { display: none; } /* Bug IE/Win */
+
+/* Structure generale des formulaires
+----------------------------------------------- */
+.formulaire_spip { clear: both; margin-bottom: /*@margin-bottom*/1.5em/*/@*/; padding: /*@demi-line-height*/0.75em/*/@*/; border: 1px solid #ddd; background-color: #FCFCFC;text-align: left; }
+
+/* Fieldset */
+.formulaire_spip fieldset { clear: both; margin: 0;margin-bottom: margin-bottom: /*@margin-bottom*/1.5em/*/@*/; padding: 0; border: 0; }
+.formulaire_spip fieldset legend { margin: 0; padding: 0; font-size: 1.25em; font-weight: bold; background-color: #FCFCFC; color: #333; } /* Preciser la couleur des legend et du fond pour IE/Win */
+.formulaire_spip fieldset fieldset { margin-top: /*@margin-bottom*/1.5em/*/@*/; }
+.formulaire_spip fieldset fieldset legend { font-size: 1em; font-weight: normal; }
+
+/* Explications */
+.formulaire_spip .explication { color: #444;margin-bottom: 0;padding: /*@demi-line-height*/0.75em/*/@*/ 0;}
+
+/* Lignes */
+.formulaire_spip .editer { clear: both; margin: 0 /*@demi-line-height*/-0.75em/*/@*/; padding: /*@demi-line-height*/0.75em/*/@*/; }
+
+/* Labels */
+.formulaire_spip .editer>label { display: block; text-align: left; color: #444; font-weight: bold;}
+
+.formulaire_spip .choix label {display:inline;font-weight:normal;}
+.formulaire_spip .choix input.radio,
+.formulaire_spip .choix input.checkbox {width:auto;}
+
+
+/* Champs de saisie */
+.formulaire_spip input.text { width: 100%;}
+.formulaire_spip textarea { width: 100%; }
+.formulaire_spip select { width: 100%; }
+
+/* Boutons */
+.formulaire_spip .boutons { clear: both; margin: 0; padding: 0; text-align: right; margin-top: /*@margin-bottom*/1.5em/*/@*/; }
+.formulaire_spip .boutons input { margin-left: 1em; }
+.formulaire_spip .boutons input, input.submit {}
+
+@media print {
+	.formulaire_spip { display: none; }
+}
+
+/* Reponses, previsu et erreurs
+----------------------------------------------- */
+
+/* Champs obligatoires */
+.formulaire_spip li.obligatoire {}
+.formulaire_spip li.obligatoire label {font-weight: strong;}
+
+
+/* Reponses */
+.reponse_formulaire { margin-bottom: /*@margin-bottom*/1.5em/*/@*/; padding: /*@demi-margin-bottom*/0.75em/*/@*/; border: 2px solid #ddd; }
+.reponse_formulaire_ok { background: #e6efc2; color: #264409; border-color: #c6d880; }
+.reponse_formulaire_erreur { background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; }
+.reponse_formulaire_ok a { color: #264409; }
+.reponse_formulaire_erreur a { color: #8a1f11; }
+
+
+/* Previsualisation du message */
+fieldset.previsu { margin-bottom: /*@margin-bottom*/1.5em/*/@*/;padding: /*@demi-margin-bottom*/0.75em/*/@*/; border: 2px dashed #F57900; }
+fieldset.previsu legend { color: #F57900; }
+fieldset.previsu legend { padding-left:0.50em; font-weight: bold; color: #F57900; }
+/* Reponse du formulaire */
+fieldset.previsu .reponse_formulaire { font-weight: bold; color: #e86519;}
+fieldset.reponse_formulaire { border-color: #e86519; font-weight: normal; }
+
+
+/* * Erreurs */
+.editer.erreur { background-color: #fbe3e4; }
+.editer .erreur_message { display: block; color: #C30; font-weight: bold;}
+
+
+/* Variantes et cas particuliers
+----------------------------------------------- */
+
+/* Selection des langues */
+.formulaire_menu_lang { margin: 0; padding: 0; background: none; border: 0;}
+.formulaire_menu_lang select {width: 15em;}
+
+/* Formulaires de recherche (site / petitions) */
+.formulaire_recherche { padding: 0; background: none; border: 0;}
+.formulaire_recherche * { display: inline; vertical-align: middle; }
+.formulaire_recherche label {display: block;}
+.formulaire_recherche input.text { width: 10em; padding-left: 25px; background: #FFF url(img/rechercher.gif) no-repeat left center; }
+.formulaire_recherche input.submit {}
+
+/* Choix des mots-clefs */
+.choix_mots li { float: left; width: 30%; padding: 1%; }
+
+/* Formulaire de login dans une page */
+.formulaire_login .editer {clear:left;}
+.formulaire_login input.text,.formulaire_login input.password {width:15em;}
+.formulaire_login .editer_password .details {margin-bottom:0;}
+.formulaire_login #spip_logo_auteur {float:right;}

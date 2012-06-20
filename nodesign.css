@@ -10,6 +10,7 @@ margin:0;
 padding:0;
 }
 img { border:none; }
+.formulaire_spip ul {list-style: none;margin: 0;padding: 0;}
 
 body {
 background:#fff;
@@ -280,7 +281,7 @@ padding:2px;
 p[lang] {
 font-style:italic;
 }
-
+/*
 #forum {
 border-top:1px solid #FDA847;
 clear:both;
@@ -328,4 +329,83 @@ border-top:1px solid #ccc;
 clear:both;
 margin-left:20%;
 margin-top:1em;
+}
+*/
+.comments {
+border-top:1px solid #FDA847;
+clear:both;
+}
+.comments h2 {
+margin-left:20%;
+margin-top:1em;
+}
+.comments-items {
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.comment-item {
+clear:left;
+margin-top:1em;
+overflow: hidden;
+}
+
+.comment {position: relative;}
+
+.comment .comment-meta {
+float:left;
+margin-top:1em;
+width:18%;
+}
+.comment .comment-meta .permalink {
+position: absolute;
+top:0;
+right:0;
+font-size: 2em;
+color:#999;
+text-decoration: none;
+}
+
+.comment .comment-meta .reviewer {
+display: block;
+margin-left: 60px;
+min-height: 60px;
+}
+.comment .comment-meta .avatar {
+position: absolute;
+top:1.3em;
+left:0;
+}
+.comment .comment-meta .dtreviewed {
+display: block;
+border-bottom: none;
+}
+
+.comment .comment-content {
+border-top:1px solid #ccc;
+margin-left:20%;
+margin-right:1em;
+margin-top:1em;
+}
+.comment .actions {
+text-align: left;
+margin-left:20%;
+}
+.comment .actions * {
+display: inline;
+}
+.comments .formulaire_forum {
+margin-left:20%;
+}
+.comments .formulaire_forum textarea{
+height: 10em;
+}
+.comments .formulaire_forum .avatar {
+top:0px;
+}
+.comments .formulaire_forum .comment-meta .par {display: none;}
+.comments .formulaire_forum .fn {
+margin-left: 60px;
+word-wrap: break-word;
 }
