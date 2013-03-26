@@ -133,14 +133,14 @@ h1,
   font-size: 1.61111em;
   line-height: 1;
   font-weight: 700;
-  margin: 0 0 .5em; }
+  margin: 0 0 0.5em; }
 
 h2,
 .h2 {
   font-size: 1.38889em;
   line-height: 1;
   font-weight: 700;
-  margin: 0 0 .25em; }
+  margin: 0 0 0.25em; }
 
 h3,
 .h3 {
@@ -153,12 +153,16 @@ p {
 p[lang] {
   font-style: italic; }
 
+code, pre {
+  font-family: Consolas,'Liberation Mono','DejaVu Sans Mono','Bitstream Vera Sans Mono','Courier New',monospace;
+  font-size: 0.95em; }
+
 ol, ul {
   list-style: disc;
   margin: 0 0 1.5em; }
 
 li {
-  margin: 0 0 .25em; }
+  margin: 0 0 0.25em; }
 
 /* @charset "CP850";*/
 /*commun ==================== */
@@ -209,7 +213,7 @@ pre,
   margin: 0 0 1em; }
 #boussole ul {
   list-style: none;
-  margin: 0 0 .5em;
+  margin: 0 0 0.5em;
   padding: 0; }
 #boussole strong {
   font-weight: 700; }
@@ -310,7 +314,7 @@ pre,
   font-size: medium;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 0 .5em; }
+  margin: 0 0 0.5em; }
 
 #unesecondaire {
   float: right;
@@ -356,7 +360,7 @@ pre,
 
 .logo_auteur {
   background: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   float: right;
   margin-bottom: 10px;
   margin-left: 20px;
@@ -413,7 +417,7 @@ pre,
       display: block;
       border-bottom: none; }
   .comment .comment-content {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #cccccc;
     margin-left: 20%;
     margin-right: 1em;
     margin-top: 1em; }
