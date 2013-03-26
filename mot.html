@@ -1,46 +1,36 @@
-#CACHE{86400}
-<BOUCLE_mot_principal(MOTS) {id_mot} {doublons}>
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
-  <head>
-    <title>[(#TITRE|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
-    <INCLURE{fond=inc-head}>
-  </head>
+<BOUCLE_principale(MOTS){id_mot}>
+<!doctype html>
+<html lang="#LANG">
+<head>
+<INCLURE{fond=inc/head,env}>
+<title><BOUCLE_groupes_title(GROUPES_MOTS){id_groupe}>[(#TITRE|textebrut)] :</BOUCLE_groupes_title> [(#TITRE|textebrut)] | #NOM_SITE_SPIP</title>
 
-  <body>
-    <div id="page">
+</head>
+<body>
+<INCLURE{fond=inc/body_prepend,env}>
 
-		<div id="bandeau">
-			<INCLURE{fond=inc-accessible-sommaire}>
-			<INCLURE{fond=inc-moteur}>
-			<INCLURE{fond=inc-entete}>
-		</div><!-- #bandeau -->
 
-      <div id="texte">
-        <h2>#TITRE</h2>
+<div id="une">
+<h1><BOUCLE_groupes_h1(GROUPES_MOTS){id_groupe}>#TITRE :</BOUCLE_groupes_h1> #TITRE</h1>
+<div class="chemindefer">
+<p><a href="#URL_SITE_SPIP">#NOM_SITE_SPIP</a>&nbsp;&gt; <BOUCLE_groupes(GROUPES_MOTS){id_groupe}>#TITRE :</BOUCLE_groupes> #TITRE</p>
+</div>
 
-        [(#TEXTE|coquette)]
+<B_une>
+[<p class="pagine">[(#ANCRE_PAGINATION)](#PAGINATION)</p>]
+<BOUCLE_une(ARTICLES){id_mot}{!par date}{pagination 10}>
+<INCLURE{fond=inc/article_liste,env}{id_article}>
+</BOUCLE_une>
+[<p class="pagine">(#PAGINATION)</p>]
+</B_une>
+</div><!-- /#une -->
 
-        [(#REM) Articles lies au mot-cle ]
-        <B_articles>
-        <h2><:articles:></h2>
-        <dl class="listedocs">
-          <BOUCLE_articles(ARTICLES){id_mot}{par num titre, titre}>
-          <INCLURE{fond=inc-articlecourt}{id_article}>
-          </BOUCLE_articles>
-        </dl>
-        </B_articles>
-        <:articles_none_in_category:>
-        <//B_articles>
-      </div>
+<div id="unesecondaire">
+[(#DESCRIPTIF|paragrapher)]
+[(#TEXTE|paragrapher)]
+</div><!-- /#unesecondaire -->
 
-      [(#REM) Menu de navigation par rubriques ]
-      <INCLURE{fond=inc-rubriques}>
-
-      [(#REM) Pied de page ]
-      <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
-
-    </div>
-  </body>
+<INCLURE{fond=inc/body_append,env}>
+</body>
 </html>
-</BOUCLE_mot_principal>
+</BOUCLE_principale>

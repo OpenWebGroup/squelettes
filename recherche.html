@@ -1,40 +1,32 @@
-#CACHE{86400}
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
-  <head>
-    <title><:resultats_recherche:> - [(#NOM_SITE_SPIP|textebrut)]</title>
-    <INCLURE{fond=inc-head}>
-  </head>
+<!doctype html>
+<html lang="#LANG">
+<head>
+<INCLURE{fond=inc/head,env}>
+<title><:recherche_titre:>[ : (#RECHERCHE|textebrut)] | #NOM_SITE_SPIP</title>
 
-  <body>
-    <div id="page">
+</head>
+<body>
+<INCLURE{fond=inc/body_prepend,env}>
 
-		<div id="bandeau">
-			<INCLURE{fond=inc-accessible-sommaire}>
-			<INCLURE{fond=inc-moteur}>
-			<INCLURE{fond=inc-entete}>
-		</div><!-- #bandeau -->
 
-      <div id="texte">
-        <h2><:resultats_recherche:></h2>
+<div id="une">
+<h1><:recherche_titre:></h1>
 
-        <B_articles>
-        <dl class="listedocs">
-          <BOUCLE_articles(ARTICLES){recherche}{par points}{inverse}>
-          <INCLURE{fond=inc-articlecourt}{id_article}>
-          </BOUCLE_articles>
-        </dl>
-        </B_articles>
-        <p><:search_no_results:></p>
-        <//B_articles>
-      </div>
+<B_rech>
+[<p class="pagine">[(#ANCRE_PAGINATION)](#PAGINATION)</p>]
+<BOUCLE_rech(ARTICLES){recherche}{!par points}{pagination 10}>
+<INCLURE{fond=inc/article_liste,env}{id_article}>
+</BOUCLE_rech>
+[<p class="pagine">(#PAGINATION)</p>]
+</B_rech>
+</div><!-- /#une -->
 
-      [(#REM) Menu de navigation par rubriques ]
-      <INCLURE{fond=inc-rubriques}>
+<div id="unesecondaire">
+[<p><:votre_recherche:> <strong>(#RECHERCHE)</strong></p>
+<p><strong>#_rech:GRAND_TOTAL <:recherche_resultats:></strong>, #_rech:TOTAL_BOUCLE <:sur_cette_page:></p>]
+</div><!-- /#unesecondaire -->
 
-      [(#REM) Pied de page ]
-      <INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
-
-    </div>
-  </body>
+<INCLURE{fond=inc/body_append,env}>
+</body>
 </html>
+</BOUCLE_principale>

@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html; charset=#CHARSET" />
+[<link rel="stylesheet" type="text/css" href="(#CHEMIN{form.css})" media="all" />]
+[<link rel="stylesheet" type="text/css" href="(#CHEMIN{spip.form.css})" media="all" />]
+[<link rel="stylesheet" type="text/css" href="(#CHEMIN{css/nodesign.css})" media="all" />]
+#INSERT_HEAD
+<link rel="alternate" type="application/rss+xml" title="Syndiquer tout le site" href="#URL_SITE_SPIP/?page=backend" />
+<BOUCLE_syndiquecommentairesarticle(ARTICLES){id_article}>
+</BOUCLE_syndiquecommentairesarticle>
+<link rel="alternate" type="application/rss+xml" title="Suivre les commentaires de cet article par RSS" href="#URL_SITE_SPIP/?page=rss2_comments&id_article=#ID_ARTICLE" />
+</B_syndiquecommentairesarticle>
+<link rel="alternate" type="application/rss+xml" title="Syndiquer les commentaires" href="#URL_SITE_SPIP/?page=rss2_comments" />
+<//B_syndiquecommentairesarticle>
+[<link rel="icon" href="(#CHEMIN{favicon.ico})" />]
+[<link rel="shortcut icon" type="images/x-icon" href="(#CHEMIN{favicon.ico})" />]
+<BOUCLE_desc(ARTICLES){id_article}>
+[<meta name="description" content="(#INTRODUCTION{150}|attribut_html)" />]
+</BOUCLE_desc>
+
+<!-- Fugue icons by http://p.yusukekamiyamane.com/ -->

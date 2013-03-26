@@ -1,0 +1,26 @@
+<h1>#SQUELETTE</h1>
+<?php
+include_spip('base/abstract_sql');
+
+sql_alter("TABLE spip_articles DROP ow_url");
+sql_alter("TABLE spip_rubriques DROP ow_url");
+
+die('paf');
+
+$res = sql_select('url','spip_urls',"url LIKE '%/%'");
+while ($row = sql_fetch($res)){
+	$new_url = explode("/",$row['url']);
+	$new_url = end($new_url);
+	if ($new_url){
+		echo $row['url']." => $new_url<br />";
+		sql_updateq("spip_urls",array('url'=>$new_url),"url=".sql_quote($row['url']));
+	}
+	else {
+		sql_delete("spip_urls","url=".sql_quote($row['url']));
+	}
+}
+// toutes les urls pre-existantes sont perma
+sql_updateq("spip_urls",array("perma"=>1));
+// reinjecter le prefixe "openwebgroup/bios" sur les auteurs
+sql_update("spip_urls",array("url"=>"concat('openwebgroup/bios/',url)"),"type='auteur'");
+?>

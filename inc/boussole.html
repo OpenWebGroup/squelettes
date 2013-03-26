@@ -1,0 +1,28 @@
+<h2 class="hideme"><:reperes:></h2>
+<p class="langswitcher">
+[(#ENV{lang}|=={fr}|oui)
+<a href="#URL_SITE_SPIP/?lang=en" lang="en" hreflang="en">See this site in English</a>
+]
+[(#ENV{lang}|=={fr}|non)
+<a href="#URL_SITE_SPIP/?lang=fr" lang="fr" hreflang="fr">Voir ce site en français</a>
+]
+</p>
+<div role="search">
+<form action="/recherche/" method="get">
+<h3><:recherche:></h3>
+<input type="search" name="recherche" id="recherche"[ value="(#RECHERCHE)"]>
+<button id="lancerecherche" title="<:lancer_la_recherche:>"><img src="[(#CHEMIN{img/magnifier-zoom.png})]" alt="<:lancer_la_recherche:>" width="16" height="16"></button>
+</form>
+</div><!-- /role=search -->
+<BOUCLE_groupes(GROUPES_MOTS){par titre}>
+<h3>#TITRE</h3>
+<ul class="mots">
+<BOUCLE_mots(MOTS){id_groupe}{par titre}>
+<BOUCLE_testarticle(ARTICLES){id_article=#ENV{id_article}}{id_mot}>
+<li><a href="#URL_MOT"><strong>#_mots:TITRE</strong></a></li>
+</BOUCLE_testarticle>
+<li><a href="#URL_MOT">#_mots:TITRE</a></li>
+<//B_testarticle>
+</BOUCLE_mots>
+</ul>
+</BOUCLE_groupes>

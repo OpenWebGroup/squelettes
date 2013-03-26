@@ -1,0 +1,50 @@
+#CACHE{3600}
+<?php
+	@header('Content-type: text/xml[; charset=(#CHARSET)]');
+	echo '<'.'?xml version="1.0" encoding="#CHARSET"?'.">\n";
+?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<channel>
+	<title>[(#NOM_SITE_SPIP|textebrut|texte_backend)]</title>
+	<link>#URL_SITE_SPIP/</link>
+	[<description>(#DESCRIPTIF_SITE_SPIP|supprimer_tags|texte_backend)</description>]
+	<language>#LANG</language>
+	<generator>SPIP - www.spip.net</generator>
+
+[	<image>
+		<title>[(#NOM_SITE_SPIP|texte_backend)]</title>
+		<url>(#LOGO_SITE_SPIP|image_reduire{144,400}|extraire_attribut{src}|url_absolue|texte_backend)</url>
+		<link>#URL_SITE_SPIP/</link>
+		[<height>(#LOGO_SITE_SPIP|image_reduire{144,400}|extraire_attribut{height})</height>]
+		[<width>(#LOGO_SITE_SPIP|image_reduire{144,400}|extraire_attribut{width})</width>]
+	</image>
+]
+
+
+<BOUCLE_last_comments(FORUMS) {plat}{id_article}{!par date}{0,20}>
+<item>
+	<link>#URL_SITE_SPIP/#URL_FORUM</link>
+	<title>[(#TITRE|strip_tags|texte_backend)]</title>
+	<description>[(#TEXTE|liens_absolus|texte_backend)]</description>
+	<dc:date>[(#DATE|date_iso)]</dc:date>
+	<dc:format>text/html</dc:format>
+	[<dc:creator>(#NOM)</dc:creator>]
+</item>
+</BOUCLE_last_comments>
+</B_last_comments>
+<BOUCLE_last_comments_total(FORUMS) {plat}{id_article!=0}{!par date}{0,20}>
+<item>
+	<link>#URL_SITE_SPIP/#URL_FORUM</link>
+	<title>[(#TITRE|strip_tags|texte_backend)]</title>
+	<description>[(#TEXTE|liens_absolus|texte_backend)]</description>
+	<dc:date>[(#DATE|date_iso)]</dc:date>
+	<dc:format>text/html</dc:format>
+	[<dc:creator>(#NOM)</dc:creator>]
+</item>
+</BOUCLE_last_comments_total>
+<//B_last_comments>
+
+</channel>
+
+</rss>
